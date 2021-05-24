@@ -2,7 +2,7 @@
 
 function footer() {
 echo '
-<footer class="foot" id="foot">
+<footer class="all-foot" id="all-foot">
         <small id="copy">&#169;Copyright 2021 www.Dollyllama.ninja</small>
 
         <div class="social">
