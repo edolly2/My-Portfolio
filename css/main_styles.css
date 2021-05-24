@@ -1,0 +1,314 @@
+        /* =============EVERY PAGE BASE STYLE================ */
+        /*                       BELOW                        */
+        /*                                                    */
+        /* ================================================== */
+        /* ---ALL--- */
+
+        html {
+            font-size: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: none;
+            height: 101%;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        summary {
+            cursor: pointer;
+            color: white;
+            text-shadow: 4px 4px 5px black, 2px 2px 0 rgb(0, 1, 61), 2px -2px 0 rgb(0, 1, 61), -2px 2px 0 rgb(0, 1, 61), -2px -2px 0 rgb(0, 1, 61), 2px 0px 0 rgb(0, 1, 61), 0px 2px 0 rgb(0, 1, 61), -2px 0px 0 rgb(0, 1, 61), 0px -2px 0 rgb(0, 1, 61);
+            font-family: 'Permanent Marker';
+            font-weight: bold;
+        }
+
+        html,
+        body {
+            background-image: url("../images/meredblue.png"), radial-gradient(circle, rgba(48, 201, 254, 1) 20%, rgba(243, 208, 156, 1) 67%, rgba(254, 83, 83, 1) 82%, rgba(22, 97, 127, 1) 87%, rgba(24, 25, 25, 1) 100%);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        header h1 {
+            padding-top: 30px;
+        }
+        /* ======================GRID======================== */
+        /*                      BELOW                         */
+        /*                                                    */
+        /* ================================================== */
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 0.4fr 2fr 0.1fr;
+            grid-template-rows: 0.3fr 2.5fr 0.1fr;
+            gap: 0px 0px;
+            grid-template-areas: "header header header""main main main""footer footer footer";
+        }
+
+        .grid-head {
+            grid-area: header;
+            max-height: 125px;
+        }
+        /* ====================NAVIGATION==================== */
+        /*                       BELOW                        */
+        /*                                                    */
+        /* ================================================== */
+
+        .nav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background: rgb(24, 25, 25);
+            background: linear-gradient(90deg, rgba(24, 25, 25, 1) 0%, rgba(22, 97, 127, 1) 100%);
+            overflow: hidden;
+            transition: 0.5s;
+            grid-area: nav;
+            box-shadow: 5px 5px 20px black;
+        }
+
+        .nav a {
+            padding: 7vh 10px;
+            text-decoration: none;
+            font-size: 5vh;
+            color: #fff;
+            display: block;
+            transition: all 0.2s linear;
+        }
+
+        .nav a:hover {
+            color: yellow;
+            text-decoration: line-through;
+        }
+
+        .nav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        /* ---NAV BUTTON--- */
+
+        .arrow {
+            position: absolute;
+            color: #fe5353;
+            animation-name: arrow-fas;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            padding-left: 10px;
+        }
+        /* ======================MAIN======================== */
+        /*                       BELOW                        */
+        /*                                                    */
+        /* ================================================== */
+
+        .main {
+            grid-area: main;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 5%;
+        }
+
+        .main h1 {
+            display: flex;
+            justify-content: flex-end;
+            font-size: clamp(4em, 5.5em, 6em);
+            padding: 4%;
+        }
+
+        .main-p {
+            display: flex;
+            font-size: clamp(1em, 1.5em, 2em);
+            text-align: center;
+            padding-left: 5px;
+            line-height: 1.5em;
+        }
+        /* =====================FOOTER======================= */
+        /*                       BELOW                        */
+        /*                                                    */
+        /* ================================================== */
+
+        .foot {
+            display: flex;
+            grid-area: footer;
+        }
+
+        #copy {
+            padding-left: 2%;
+            color: white;
+            align-self: flex-end;
+        }
+        /* ---SOCIAL MEDIA--- */
+
+        .social {
+            height: auto;
+            margin-left: auto;
+            padding-top: 10px;
+        }
+
+        .social a {
+            padding: 0 10px;
+            color: white;
+            text-shadow: 4px 4px 7px black;
+            font-size: small;
+            transition: all 0.2s linear;
+        }
+
+        .social a:hover {
+            color: yellow;
+        }
+
+        .social i:hover {
+            transform: translate(-5px, -5px);
+        }
+        /* ===================LOGO/PHOTOS==================== */
+        /*                       BELOW                        */
+        /*                                                    */
+        /* ================================================== */
+
+        #logo {
+            grid-area: logo;
+            display: flex;
+            width: 5em;
+            height: auto;
+            margin-left: auto;
+            padding-top: 10px;
+            padding-right: 10px;
+        }
+        /* ====================TYPOGRAPHY==================== */
+        /*                       BELOW                        */
+        /*                                                    */
+        /* ================================================== */
+
+        #myname,
+        .main-p,
+        .nav {
+            color: #FFFFFF;
+            text-shadow: 4px 4px 5px black, 2px 2px 0 rgb(0, 1, 61), 2px -2px 0 rgb(0, 1, 61), -2px 2px 0 rgb(0, 1, 61), -2px -2px 0 rgb(0, 1, 61), 2px 0px 0 rgb(0, 1, 61), 0px 2px 0 rgb(0, 1, 61), -2px 0px 0 rgb(0, 1, 61), 0px -2px 0 rgb(0, 1, 61);
+            font-family: 'Monday Routines';
+            font-weight: bold;
+        }
+
+        .main-p,
+        .nav {
+            font-family: 'Permanent Marker', cursive;
+            font-weight: normal;
+        }
+
+        .nav a:hover {
+            text-shadow: 4px 4px 5px black, 2px 2px 0 rgb(0, 1, 61), 2px -2px 0 rgb(0, 1, 61), -2px 2px 0 rgb(0, 1, 61), -2px -2px 0 rgb(0, 1, 61), 2px 0px 0 rgb(0, 1, 61), 0px 2px 0 rgb(0, 1, 61), -2px 0px 0 rgb(0, 1, 61), 0px -2px 0 rgb(0, 1, 61), 0px 0px 10px white;
+        }
+        /* =================================================== */
+        /* ===================================================*/
+        /* ====================ANIMATION===================== */
+        /*                       BELOW                        */
+        /*                                                    */
+        /* ================================================== */
+
+        @keyframes arrow-fas {
+            0% {
+                color: white;
+                text-shadow: 4px 4px 5px black, 2px 2px 0 rgb(0, 1, 61), 2px -2px 0 rgb(0, 1, 61), -2px 2px 0 rgb(0, 1, 61), -2px -2px 0 rgb(0, 1, 61), 2px 0px 0 rgb(0, 1, 61), 0px 2px 0 rgb(0, 1, 61), -2px 0px 0 rgb(0, 1, 61), 0px -2px 0 rgb(0, 1, 61);
+            }
+            25% {
+                color: rgb(0, 1, 61);
+            }
+            50% {
+                color: white;
+                text-shadow: 4px 4px 5px black, 2px 2px 0 rgb(0, 1, 61), 2px -2px 0 rgb(0, 1, 61), -2px 2px 0 rgb(0, 1, 61), -2px -2px 0 rgb(0, 1, 61), 2px 0px 0 rgb(0, 1, 61), 0px 2px 0 rgb(0, 1, 61), -2px 0px 0 rgb(0, 1, 61), 0px -2px 0 rgb(0, 1, 61);
+            }
+            75% {
+                color: rgb(0, 1, 61);
+            }
+            100% {
+                color: white;
+                text-shadow: 4px 4px 5px black, 2px 2px 0 rgb(0, 1, 61), 2px -2px 0 rgb(0, 1, 61), -2px 2px 0 rgb(0, 1, 61), -2px -2px 0 rgb(0, 1, 61), 2px 0px 0 rgb(0, 1, 61), 0px 2px 0 rgb(0, 1, 61), -2px 0px 0 rgb(0, 1, 61), 0px -2px 0 rgb(0, 1, 61);
+            }
+        }
+        /* =====================MEDIA Qs===================== */
+        /*                       BELOW                        */
+        /*                                                    */
+        /* ================================================== */
+        /* ---MAX-WIDTH */
+
+        @media screen and (max-width: 750px) {
+            #copy {
+                display: none;
+            }
+            .about-head {
+                font-size: 9vw;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            html {
+                font-size: 80%;
+            }
+            .about-head {
+                font-size: 10vw;
+            }
+            .social a {
+                font-size: 9px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .arrow {
+                font-size: 50px;
+            }
+            .main h1 {
+                padding-bottom: 10%;
+            }
+            .about-head {
+                font-size: 40px;
+            }
+        }
+
+        @media screen and (max-width: 380px) {
+            .social a {
+                font-size: 6px;
+            }
+            .about-head {
+                font-size: 30px;
+            }
+        }
+        /* ---MAX-HEIGHT--- */
+
+        @media screen and (max-height: 480px) {
+            .foot {
+                position: relative;
+                bottom: 0;
+                right: 0;
+            }
+            .fas {
+                font-size: 50px;
+            }
+            .social a {
+                font-size: 8px;
+            }
+            .nav {
+                padding-top: 15px;
+            }
+            .nav a {
+                font-size: 18px;
+            }
+        }
