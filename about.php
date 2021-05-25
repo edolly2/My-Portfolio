@@ -1,4 +1,9 @@
 <?php
+$titleClass = "about-head";
+$title = "About Me";
+?>
+
+<?php
 require __DIR__ . '/php/functions/require.php';
 echo doctype();
 ?>
@@ -8,7 +13,7 @@ echo doctype();
 <?php
 echo head();
 ?>
-<link rel="stylesheet" href="css/biocard.css">
+<link rel="stylesheet" href="css/about.css">
 <style>
         #about {
             color: yellow;
@@ -16,27 +21,24 @@ echo head();
 
     </style>
 </head>
-<body>
+<body class="grid-container">
+<header class="grid-head">
+<h1 class=<?php echo "$titleClass"; ?>><?php echo $title; ?></h1>
     <?php
-
-    echo topHeader();
-
+    echo allHeader();
     ?>
-    <?php
+</header>
 
+    <?php
     echo nav();
     ?>
 
     <?php
-
-    echo main();
-    
+    echo aboutMain();
     ?>
 
     <?php
-
     echo footer();
-    
     ?>
 
 </body>

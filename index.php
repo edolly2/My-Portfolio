@@ -15,28 +15,22 @@ echo head();
 
     </style>
 </head>
-<body>
+<body class="grid-container">
+    
     <?php
-
-    echo topHeader();
-
+    echo homeHeader();
     ?>
-    <?php
 
+    <?php
     echo nav();
     ?>
 
     <?php
-
-    echo main();
-    
+    echo homeMain();
     ?>
 
     <?php
-
     echo footer();
-    $test = '<button class="test">test</button>';
-    echo $test;
     ?>
 
 </body>

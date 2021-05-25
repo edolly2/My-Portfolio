@@ -15,6 +15,7 @@ window.addEventListener('orientationchange', function(event) {
     );
 });
 
+
 function openForm() {
     document.getElementById('myForm').style.display = 'block';
 }
@@ -27,16 +28,29 @@ const certsModal = $('.certs-modal-cont');
 const certsExitBtn = $('.certs-modal-close-btn');
 const certsBtn = $('.certs-btn');
 
+const bioModal = $('.bio-modal-cont');
+const bioExitBtn = $('.bio-modal-close-btn');
+const bioBtn = $('.bio-modal-btn');
+
 $(document).ready(() => {
     $(certsExitBtn).on('click', () => {
         $(certsModal).hide();
+        $(certsBtn).show();
     });
 
     $(certsBtn).on('click', () => {
         $(certsModal).show();
-    })
+        $(certsBtn).hide();
+    });
 
-    $('.test').on('click', () => {
-        $('.test').hide();
-    })
+    $(bioExitBtn).on('click', () => {
+        $(bioModal).hide();
+        $(bioBtn).show();
+    });
+
+    $(bioBtn).on('click', () => {
+        $(bioModal).show();
+        $(bioBtn).hide();
+    });
+
 });

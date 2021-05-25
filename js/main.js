@@ -14,13 +14,16 @@ $(document).ready(() => {
     });
 });
 
+$(document).ready(() => {
 
-const submit = document.getElementById('submit');
-const toast = document.getElementById('snackbar');
 
-submit.addEventListener('click', () => {
-    toast.classList.add('show-toast');
-    setTimeout(() => {
-        toast.className = toast.className.replace("show-toast", "");
-    }, 3000);
+    const submit = document.getElementById('submit');
+    const toast = document.getElementById('snackbar');
+
+    $('#submit').on('click', () => {
+        $('#snackbar').addClass('show-toast');
+        setTimeout(() => {
+            toast.className = toast.className.replace("show-toast", "");
+        }, 3000);
+    });
 });

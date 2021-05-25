@@ -21,10 +21,10 @@ body {
 }
 
 .about-head {
+    position: absolute;
     text-align: center;
     font-size: clamp(45px, 7vw, 110px);
-    height: 100%;
-    width: 50%;
+    width: 100%;
     margin: auto;
     color: #FFFFFF;
     text-shadow: 4px 4px 5px black, 2px 2px 0 rgb(0, 1, 61), 2px -2px 0 rgb(0, 1, 61), -2px 2px 0 rgb(0, 1, 61), -2px -2px 0 rgb(0, 1, 61), 2px 0px 0 rgb(0, 1, 61), 0px 2px 0 rgb(0, 1, 61), -2px 0px 0 rgb(0, 1, 61), 0px -2px 0 rgb(0, 1, 61);
@@ -88,11 +88,11 @@ h2 {
     margin: 0 auto;
 }
 
-.certs-btn-cont {
+.certs-btn-cont, .bio-modal-btn-cont {
     text-align: center;
 }
 
-.certs-btn {
+.certs-btn, .bio-modal-btn{
     padding: 1rem 3rem;
     font-family: 'Permanent Marker';
     background-color: yellow;
@@ -103,7 +103,7 @@ h2 {
     border-radius: 6px;
 }
 
-.certs-modal-cont {
+.certs-modal-cont, .bio-modal-cont {
     width: 90vw;
     height: 90vh;
     position: absolute;
@@ -112,13 +112,15 @@ h2 {
     transform: translate(-50%, -50%);
     padding: 30px;
     background-color: white;
+    display: none;
 }
 
-.certs-modal-close-btn-cont {
+.certs-modal-close-btn-cont, .bio-modal-close-btn-cont {
     display: flex;
     justify-content: flex-end;
 }
 
-.certs-modal-close-btn {
-    font-size: clamp(30px, 2.6vw, 40px);;
+.certs-modal-close-btn, .bio-modal-close-btn {
+    font-size: clamp(30px, 2.6vw, 40px);
 }
+

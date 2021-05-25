@@ -1,6 +1,6 @@
 <?php
 
-function topHeader() {
+function homeHeader() {
     echo ' 
     <header class="grid-head">
         <span style="font-size:25px;cursor:pointer" onclick="openNav()"><i
