@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eric Dollinger's portfolio website main page">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <link rel="canonical" href="index.html">
+    <title>Eric Dollinger's Portfolio</title>
+    <link rel="stylesheet" href="css/RESET.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/typography/typography.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <div id="page">
+        <header>
+            <div class="header">
+                <div class="nav-menu-btn-cont">
+                    <i class="fas fa-chevron-circle-right nav-menu-btn"></i>
+                </div>
+                <div class="logo-cont">
+                    <a href="index.html"><img src="assets/images/logo.png" alt="Eric Dollinger's Logo" class="logo"></a>
+                </div>
+            </div>
+        </header>
+        <div class="home-title-cont">
+            <h1 id="home-title">Eric Dollinger</h1>
+        </div>
+        <div class="home-main-p-cont">
+            <p class="home-main-p">My name is Eric Dollinger and I am a Front End Developer.<br /> I am very passionate
+                about what I do.<br /> Look around and find out more!
+            </p>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="nav-menu-cont">
+            <div class="nav-menu-exit-btn-cont">
+                <i class="fas fa-times-circle nav-menu-exit-btn"></i>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li id="about" class="nav-link" value="">About</li>
+                    <li id="projects" class="nav-link" value="">Projects</li>
+                    <li id="contact" class="nav-link" value="">Contact</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="about-modal-cont modal">
+            <div class="about-exit-btn-cont exit-cont">
+                <i class="fas fa-times-circle about-exit-btn exit-btn"></i>
+            </div>
+            <div class="about-title-cont modal-title-cont">
+                <h2>About Me</h2>
+            </div>
+            <div class="box-cont">
+                <div class="bio-title-cont sub-title-cont">
+                    <h3>My Bio</h3>
+                    <hr />
+                </div>
+
+                <div class="bio-btn-cont">
+                    <button class="bio-btn modal-btns">View Bio</button>
+                </div>
+            </div>
+            <div class="skills-cont box-cont">
+                <div class="skills-title-cont sub-title-cont">
+                    <h3>Areas of Knowledge</h3>
+                    <hr />
+                </div>
+                <div class="skills-cont">
+                    <i class="fab-info fab fa-github-alt fa-2x" title="GitHub"></i>
+                    <i class="fab-info fab fa-git-square fa-2x" title="Git"></i>
+                    <i class="fab-info fab fa-css3-alt fa-2x" title="CSS3"></i>
+                    <i class="fab-info fab fa-bootstrap fa-2x" title="Bootstrap"></i>
+                    <i class="fab-info fab fa-linux fa-2x" title="Linux"></i>
+                    <i class="fab-info fab fa-python fa-2x" title="Python2/3"></i>
+                    <i class="fab-info fab fa-html5 fa-2x" title="HTML5"></i>
+                    <i class="fab-info fab fa-js-square fa-2x" title="JavaScript"></i>
+                    <i class="fab-info fab fa-node-js fa-2x" title="NodeJS"></i>
+                    <i class="fab-info fab fa-sass fa-2x" title="SASS"></i>
+                    <i class="fab-info fab fa-react fa-2x" title="ReactJS"></i>
+                    <i class="fab-info fab fa-npm fa-2x" title="npm"></i>
+                    <img src="assets/icons/redux.svg" alt="redux" title="redux" />
+                    <img src="assets/icons/gimp.svg" alt="GIMP" title="GIMP" />
+                    <img src="assets/icons/inkscape.svg" alt="Inkscape" title="Inkscape" />
+                    <img src="assets/icons/jquery.svg" alt="jQuery" title="jQuery" style="width: 32px" />
+                </div>
+            </div>
+            <div class="box-cont">
+                <div class="certs-title-cont sub-title-cont">
+                    <h3>Certifications</h3>
+                    <hr />
+                </div>
+
+                <div class="certs-btn-cont">
+                    <button class="certs-btn modal-btns">View All</button>
+                </div>
+            </div>
+        </div>
+        <div class="projects-modal-cont modal">
+            <div class="projects-exit-btn-cont exit-cont">
+                <i class="fas fa-times-circle projects-exit-btn exit-btn"></i>
+            </div>
+            <div class="projects-title-cont modal-title-cont">
+                <h2>My Projects</h2>
+            </div>
+        </div>
+        <div class="contact-modal-cont modal">
+            <div class="contact-exit-btn-cont exit-cont">
+                <i class="fas fa-times-circle contact-exit-btn exit-btn"></i>
+            </div>
+            <div class="contact-title-cont modal-title-cont">
+                <h2>Contact Me</h2>
+            </div>
+        </div>
+    </main>
+
+    <footer class="foot">
+        <small id="copy">&#169;Copyright 2021 www.Dollyllama.ninja</small>
+
+        <div class="social-cont">
+            <a href="https://www.facebook.com/dev.dollinger" alt="My Facebook Page" target="_blank"><i
+                    class="fab fa-facebook-square fa-3x soci"></i></a>
+            <a href="https://github.com/edolly2" alt="My GitHub Page" target="_blank"><i
+                    class="fab fa-github-square fa-3x soci"></i></a>
+            <a href="https://stackexchange.com/users/20534397/edolly2" alt="My Stack Overflow Page" target="_blank"><i
+                    class="fab fa-stack-overflow fa-3x soci"></i></a>
+            <a href="https://twitter.com/DevDollinger" alt="My Twitter Page" target="_blank"><i
+                    class="fab fa-twitter-square fa-3x soci"></i></a>
+            <a href="https://www.linkedin.com/in/eric-dollinger-967876202/" alt="My Linkedin Page" target="_blank"><i
+                    class="fab fa-linkedin fa-3x soci"></i></a>
+        </div>
+    </footer>
+    <div class="certs-cont skill-modals">
+        <ul class="certs">
+            <li><a href="assets/certs/CertificateOfCompletion_Become_FrontEnd_Web_Developer.pdf">FrontEnd Developer Path
+                    Completion Certification</a></li>
+            <li><a href="assets/certs/html.pdf">HTML5 Certification</a></li>
+            <li><a href="assets/certs/HTML_Essential_Training.pdf">HTML5 Certification 2</a></li>
+            <li><a href="assets/certs/css.pdf">CSS3 Certification</a></li>
+            <li><a href="assets/certs/CSS_Essential_Training.pdf">CSS3 Certification 2</a></li>
+            <li><a href="assets/certs/CSS4.pdf">CSS3 Certification 3</a></li>
+            <li><a href="assets/certs/javascript.pdf">JavaScript Certification</a></li>
+            <li><a href="assets/certs/JavaScript_Essential_Training.pdf">JavaScript Certification 2</a></li>
+            <li><a href="assets/certs/JS_async.pdf">JavaScript Async Certification</a></li>
+            <li><a href="assets/certs/JS_errors.pdf">JavaScript Errors Certification</a></li>
+            <li><a href="assets/certs/JSinteractiveWEB.pdf">JavaScript Interactive Web Certification</a></li>
+            <li><a href="assets/certs/JS_unit_testing.pdf">JavaScript Unit Testing Certification</a></li>
+            <li><a href="assets/certs/JavaScript_Enhancing_DOM.pdf">JavaScript DOM Certification</a></li>
+            <li><a href="assets/certs/JavaScript_Classes.pdf">JavaScript Classes Certification</a></li>
+            <li><a href="assets/certs/Learning_React.js.pdf">ReactJS Certification</a></li>
+            <li><a href="assets/certs/Python.pdf">Python3 Certification</a></li>
+        </ul><br />
+        <ul class="certs">
+            <li><a href="assets/certs/jQuery.pdf">jQuery Certification</a></li>
+            <li><a href="assets/certs/jQuery_Essential_Training.pdf">jQuery Certification 2</a></li>
+            <li><a href="assets/certs/NodeJS.pdf">NodeJS Certification</a></li>
+            <li><a href="assets/certs/Become_Web_Developer.pdf">Become a Web Developer Certification</a></li>
+            <li><a href="assets/certs/bootstrap.pdf">Bootstrap Certification</a></li>
+
+            <li><a href="assets/certs/Bootstrap_Essential_Training.pdf">Bootstrap Certification 2</a></li>
+            <li><a href="assets/certs/response.pdf">Responsive Layout Certification</a></li>
+            <li><a href="assets/certs/Responsive_Layout.pdf">Responsive Layout Certification 2</a></li>
+            <li><a href="assets/certs/Sass_Essential_Training.pdf">Sass Certification</a></li>
+            <li><a href="assets/certs/git.pdf">Git Certification</a></li>
+            <li><a href="assets/certs/Git_Essential_Training.pdf">Git Essential Training Certification</a></li>
+            <li><a href="assets/certs/Learning_GitHub.pdf">GitHub Certification</a></li>
+            <li><a href="assets/certs/SEO_Foundations.pdf">SEO Foundations Certification</a></li>
+            <li><a href="assets/certs/modernweb.pdf">Modern Web Design Certification</a></li>
+            <li><a href="assets/certs/foundations.pdf">Code Foundations Certification</a></li>
+            <li><a href="assets/certs/UX_Foundations_Accessibility.pdf">UX Foundations Accessibility Certification</a>
+            </li>
+        </ul><br />
+        <ul class="certs">
+            <li><a href="assets/certs/Workflow_Tool_Web Developers.pdf">Web Developer Workflow Tools Certification</a>
+            </li>
+            <li><a href="assets/certs/nav.pdf">Navigation Certification</a></li>
+            <li><a href="assets/certs/color.pdf">Color Theory Certification</a></li>
+            <li><a href="assets/certs/UX_Design.pdf">UX Design Certification</a></li>
+            <li><a href="assets/certs/Learning_npm_Node_Package_Manager.pdf">npm Certification</a></li>
+            <li><a href="assets/certs/build.pdf">Build Certification</a></li>
+            <li><a href="assets/certs/line.pdf">Command LineCertification</a></li>
+            <li><a href="assets/certs/bash.pdf">Bash Certification</a></li>
+            <li><a href="assets/certs/succeeding.pdf">Succeeding Certification</a></li>
+            <li><a href="assets/certs/deploy.pdf">Deploy Website Certification</a></li>
+            <li><a href="assets/certs/name.pdf">Namecheap Certification</a></li>
+            <li><a href="assets/certs/learn_2_code.pdf">Learn to Code Certification</a></li>
+            <li><a href="assets/certs/Databases.pdf">Databases Certification</a></li>
+            <li><a href="assets/certs/REST_APIs.pdf">RESTful API's Certification</a></li>
+            <li><a href="assets/certs/Programming_Foundations_Fundamentals.pdf">Programming Fundamentals
+                    Certification</a></li>
+        </ul>
+        <div class="goback-btn-cont">
+            <i class="fas fa-chevron-circle-left goback-btn"></i>
+            <p>Go-Back</p>
+        </div>
+    </div>
+    <div class="bio-cont skill-modals">
+        <p class="bio-p" style="text-indent: 30px;">Hi! I'm Eric. A passionate and dedicated Front-end
+            Developer.<br /> I am also, an avid linux user and know the command line very well. GIMP, Inkscape,
+            Openshot and other various design programs ar a familiarity to me.<br /> My main specialties
+            are HTML, CSS, and JS but I continue to advance my knowledge in other programming languages,
+            libraries, and frameworks.
+            <br /> I pride myself on solving problems effectively and efficiently. I work great in groups as
+            well as alone and have proven to be a great asset to any team.<br /> I look foward to advancing my
+            knowledge and climbing the developer ladder.
+        </p><br />
+        <div class="goback-btn-cont2">
+            <i class="fas fa-chevron-circle-left goback-btn2"></i>
+            <p>Go-Back</p>
+        </div>
+    </div>
+</body>
+
+</html>
