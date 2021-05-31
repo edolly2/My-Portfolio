@@ -51,21 +51,21 @@
 
     <main>
 
-        <div class="nav-menu-cont">
+        <div class="nav-menu-cont" id="navCont">
             <div class="nav-menu-exit-btn-cont">
                 <i class="fas fa-times-circle nav-menu-exit-btn"></i>
             </div>
             <nav class="nav-menu">
                 <ul>
-                    <li id="about" class="nav-link" value="">About</li>
-                    <li id="projects" class="nav-link" value="">Projects</li>
-                    <li id="contact" class="nav-link" value="">Contact</li>
+                    <li id="about" class="nav-link">About</li>
+                    <li id="projects" class="nav-link">Projects</li>
+                    <li id="contact" class="nav-link">Contact</li>
                 </ul>
             </nav>
         </div>
         <div class="about-modal-cont modal">
             <div class="about-exit-btn-cont exit-cont">
-                <i class="fas fa-times-circle about-exit-btn exit-btn"></i>
+                <i class="fas fa-times-circle about-exit-btn exit-btn exit-btn-modal"></i>
             </div>
             <div class="about-title-cont modal-title-cont">
                 <h2>About Me</h2>
@@ -117,7 +117,7 @@
         </div>
         <div class="projects-modal-cont modal">
             <div class="projects-exit-btn-cont exit-cont">
-                <i class="fas fa-times-circle projects-exit-btn exit-btn"></i>
+                <i class="fas fa-times-circle projects-exit-btn exit-btn exit-btn-modal"></i>
             </div>
             <div class="projects-title-cont modal-title-cont">
                 <h2>My Projects</h2>
@@ -125,8 +125,49 @@
         </div>
         <div class="contact-modal-cont modal">
             <div class="contact-exit-btn-cont exit-cont">
-                <i class="fas fa-times-circle contact-exit-btn exit-btn"></i>
+                <i class="fas fa-times-circle contact-exit-btn exit-btn exit-btn-modal"></i>
             </div>
+            <div class="contact-icon-cont">
+                <div class="call-me-cont contact-icons">
+                    <h3>Call or Text Me</h3>
+                    <i class="card-icon fas fa-phone-square fa-10x"></i>
+                </div>
+                <div class="email-me-cont contact-icons">
+                    <h3>Email Me</h3>
+                    <i class="card-icon fas fa-envelope-open-text fa-10x"></i>
+                </div>
+                <div class="email-me-link-cont">
+                    <div class="contact-exit-btn-cont exit-cont">
+                        <i class="fas fa-times-circle email-me-exit-btn exit-btn"></i>
+                    </div>
+                    <p>Open in default mail client</p>
+                    <button>Open</button>
+                    <p>-OR-</p>
+                    <p>Copy email to clipboard</p>
+                    <input type="text" value="edolly2@protonmail.com" id="myEmailInput">
+                    <button class="copy-btn">Copy text</button>
+                </div>
+                <div class="write-me-cont contact-icons">
+                    <h3>Drop Me a Line</h3>
+                    <i class="card-icon fas fa-paper-plane fa-10x"></i>
+                </div>
+            </div>
+            <div class="contact-all-social-cont">
+                <h3 class="soci-title">Social Media</h3>
+                <div class="contact-social-cont social-cont">
+                    <a href="https://www.facebook.com/dev.dollinger" alt="My Facebook Page" target="_blank"><i
+                            class="fab fa-facebook-square fa-3x soci soci1"></i></a>
+                    <a href="https://github.com/edolly2" alt="My GitHub Page" target="_blank"><i
+                            class="fab fa-github-square fa-3x soci soci1"></i></a>
+                    <a href="https://stackexchange.com/users/20534397/edolly2" alt="My Stack Overflow Page"
+                        target="_blank"><i class="fab fa-stack-overflow fa-3x soci soci1"></i></a>
+                    <a href="https://twitter.com/DevDollinger" alt="My Twitter Page" target="_blank"><i
+                            class="fab fa-twitter-square fa-3x soci soci1"></i></a>
+                    <a href="https://www.linkedin.com/in/eric-dollinger-967876202/" alt="My Linkedin Page"
+                        target="_blank"><i class="fab fa-linkedin fa-3x soci soci1"></i></a>
+                </div>
+            </div>
+
             <div class="contact-title-cont modal-title-cont">
                 <h2>Contact Me</h2>
             </div>
@@ -227,6 +268,27 @@
             <i class="fas fa-chevron-circle-left goback-btn2"></i>
             <p>Go-Back</p>
         </div>
+    </div>
+    <div id="popup" class="popup-cont">
+        <div class="nav-menu-exit-btn-cont">
+            <i class="fas fa-times-circle nav-menu-exit-btn popup-exit-btn"></i>
+        </div>
+        <h2>Thank You For Your Interest In Me!</h2>
+        <p>I hope to hear from you soon,<br /> and
+            your visit is greatly appreciated!</p>
+        <div class="social-cont popup-social-cont">
+            <a href="https://www.facebook.com/dev.dollinger" alt="My Facebook Page" target="_blank"><i
+                    class="fab fa-facebook-square fa-3x soci"></i></a>
+            <a href="https://github.com/edolly2" alt="My GitHub Page" target="_blank"><i
+                    class="fab fa-github-square fa-3x soci"></i></a>
+            <a href="https://stackexchange.com/users/20534397/edolly2" alt="My Stack Overflow Page" target="_blank"><i
+                    class="fab fa-stack-overflow fa-3x soci"></i></a>
+            <a href="https://twitter.com/DevDollinger" alt="My Twitter Page" target="_blank"><i
+                    class="fab fa-twitter-square fa-3x soci"></i></a>
+            <a href="https://www.linkedin.com/in/eric-dollinger-967876202/" alt="My Linkedin Page" target="_blank"><i
+                    class="fab fa-linkedin fa-3x soci"></i></a>
+        </div>
+
     </div>
 </body>
 

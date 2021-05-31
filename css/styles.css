@@ -152,7 +152,9 @@ body {
 
 .nav-menu-btn,
 .nav-menu-exit-btn,
-.exit-btn, .goback-btn, .goback-btn2 {
+.exit-btn,
+.goback-btn,
+.goback-btn2 {
     font-size: clamp(3rem, 3.7vw, 6rem);
 }
 
@@ -199,13 +201,18 @@ body {
 }
 
 .nav-menu-exit-btn,
-.exit-btn, .goback-btn, .goback-btn2 {
+.exit-btn,
+.goback-btn,
+.goback-btn2 {
     padding: 3rem;
 }
 
 .nav-menu-exit-btn:hover,
 .nav-menu-btn:hover,
-.exit-btn:hover, .goback-btn:hover, .goback-btn-cont:hover, .goback-btn-cont2:hover {
+.exit-btn:hover,
+.goback-btn:hover,
+.goback-btn-cont:hover,
+.goback-btn-cont2:hover {
     color: yellow;
     text-shadow: 2px 2px 2px rgb(0, 1, 61), -2px 2px 2px rgb(0, 1, 61), 2px -2px 2px rgb(0, 1, 61), 1px 2px 2px rgb(0, 1, 61), 2px 1px 2px rgb(0, 1, 61), -1px 2px 2px rgb(0, 1, 61), 2px -1px 2px rgb(0, 1, 61), 1px -2px 2px rgb(0, 1, 61), -2px 1px 2px rgb(0, 1, 61), -1px -2px 2px rgb(0, 1, 61), -2px -1px 2px rgb(0, 1, 61), 1px 1px 2px rgb(0, 1, 61), -1px -1px 2px rgb(0, 1, 61), -1px 1px 2px rgb(0, 1, 61), 1px -1px 2px rgb(0, 1, 61), 0px 2px 2px rgb(0, 1, 61), 2px 0px 2px rgb(0, 1, 61), -2px 0px 2px rgb(0, 1, 61), 0px -2px 2px rgb(0, 1, 61), 0px 1px 2px rgb(0, 1, 61), 1px 0px 2px rgb(0, 1, 61), 0px -1px 2px rgb(0, 1, 61), -1px 0px 2px rgb(0, 1, 61), 0px 0px 2px rgb(0, 1, 61), 5px 5px 10px white;
 }
@@ -214,7 +221,7 @@ body {
     text-align: center;
 }
 
-.nav-menu li {
+.nav-link {
     padding: 3rem 0;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -235,7 +242,7 @@ body {
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
 }
 
-.nav-menu li:hover {
+.nav-link:hover {
     background-color: #1ceaea;
     color: yellow;
     box-shadow: inset 0 0 2rem black;
@@ -328,7 +335,8 @@ footer {
     padding: 3rem;
 }
 
-.certs-cont, .bio-cont {
+.certs-cont,
+.bio-cont {
     display: none;
     display: flex;
     position: absolute;
@@ -347,6 +355,7 @@ footer {
 .certs {
     padding: 3rem;
 }
+
 .certs li {
     font-family: 'Lato';
     line-height: 1.5;
@@ -374,7 +383,8 @@ hr {
     background-color: #1ceaea;
 }
 
-.goback-btn-cont, .goback-btn-cont2 {
+.goback-btn-cont,
+.goback-btn-cont2 {
     display: flex;
     flex-wrap: nowrap;
     position: absolute;
@@ -386,12 +396,14 @@ hr {
 
 }
 
-.goback-btn-cont:hover, .goback-btn-cont2:hover {
+.goback-btn-cont:hover,
+.goback-btn-cont2:hover {
     cursor: pointer;
     color: yellow;
 }
 
-.goback-btn, .goback-btn2 {
+.goback-btn,
+.goback-btn2 {
     padding-right: 1rem;
 }
 
@@ -407,4 +419,92 @@ hr {
 
 .skills-cont {
     padding-bottom: 1rem;
+}
+
+.contact-icon-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-icons {
+    padding: 3rem 4rem;
+}
+
+
+.contact-icons h3 {
+    padding: 0 0 1rem 0;
+}
+
+.contact-social-cont {
+    /* position: fixed;
+    bottom: 1rem;
+    right: 0; */
+}
+
+.contact-all-social-cont {
+    position: fixed;
+    bottom: 1rem;
+    right: 0;
+}
+
+.popup-cont {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 1.2rem;
+    display: none;
+    text-align: center;
+    color: yellow;
+    z-index: 7;
+}
+
+.popup-cont h2 {
+    padding: 3rem 3rem 7rem 3rem;
+    
+}
+
+.popup-exit-btn {
+    color: white;
+}
+
+.popup-social-cont {
+    position: fixed;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    padding: 3rem;
+}
+
+.contact-icons:hover {
+    color: yellow;
+    transform: translate(-0.5rem, -0.5rem);
+    cursor: pointer;
+}
+
+.email-me-link-cont {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 1.2rem;
+}
+
+.selected {
+    background-color: #1ceaea;
+    color: yellow; 
+    box-shadow: inset 0 0 2rem black;
 }
