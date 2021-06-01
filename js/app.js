@@ -126,13 +126,37 @@ $(document).ready(() => {
             $('.email-me-link-cont').show(500);
         }
     });
+
+    $('.call-me-cont').on('click', () => {
+        if(isMobile) {
+            parent.location.href = "tel:402-708-5866";
+        }
+        else {
+            $('.call-me-link-cont').show(500);
+        }
+    });
+
+
+    $('.write-me-cont').on('click', () => {
+        $('.write-me-link-cont').show(500);
+    });
+
     var currentMousePos = { x: -1, y: -1 };
     $(document).mousemove(function(event) {
         currentMousePos.x = event.pageX;
         currentMousePos.y = event.pageY;
         console.log(currentMousePos.x, currentMousePos.y);
     });
+
 });
+
+// CURSOR
+// let cursor = document.getElementById('cursor');
+// document.onmousemove = function(e) {
+//     cursor.style.left = (e.pageX - 25) + "px";
+//     cursor.style.top = (e.pageY - 25)+ "px";
+//     cursor.style.display = "block";
+// }
 
 function onMouseOut(event) {
     if (event.clientY < 50) {
