@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,23 +11,20 @@
     <link rel="canonical" href="index.html">
     <title>Eric Dollinger's Portfolio</title>
     <link rel="stylesheet" href="css/RESET.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/typography/typography.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/typography/typography.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z     +8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
     <script src="js/app.js" defer></script>
 </head>
 
 <body>
+    <!-- MAIN HOME PAGE -->
     <div id="page">
+        <!-- HEADER -->
         <header>
             <div class="header">
                 <div class="nav-menu-btn-cont">
@@ -39,6 +35,8 @@
                 </div>
             </div>
         </header>
+
+        <!-- TITLE AND PARA -->
         <div class="home-title-cont">
             <h1 id="home-title">Eric Dollinger</h1>
         </div>
@@ -48,9 +46,9 @@
             </p>
         </div>
     </div>
-
+<!-- MAIN -->
     <main>
-
+        <!-- NAV MENU -->
         <div class="nav-menu-cont" id="navCont">
             <div class="nav-menu-exit-btn-cont">
                 <i class="fas fa-times-circle nav-menu-exit-btn"></i>
@@ -63,6 +61,8 @@
                 </ul>
             </nav>
         </div>
+
+        <!-- ABOUT MODAL -->
         <div class="about-modal-cont modal">
             <div class="about-exit-btn-cont exit-cont">
                 <i class="fas fa-times-circle about-exit-btn exit-btn exit-btn-modal"></i>
@@ -70,21 +70,26 @@
             <div class="about-title-cont modal-title-cont">
                 <h2>About Me</h2>
             </div>
+            
+            <!-- BIO -->
             <div class="box-cont">
                 <div class="bio-title-cont sub-title-cont">
                     <h3>My Bio</h3>
                     <hr />
                 </div>
-
                 <div class="bio-btn-cont">
                     <button class="bio-btn modal-btns">View Bio</button>
                 </div>
             </div>
+
+            <!-- SKILLS -->
             <div class="skills-cont box-cont">
                 <div class="skills-title-cont sub-title-cont">
                     <h3>Areas of Knowledge</h3>
                     <hr />
                 </div>
+                
+                <!-- SKILLS ICONS -->
                 <div class="skills-cont">
                     <i class="fab-info fab fa-github-alt fa-2x" title="GitHub"></i>
                     <i class="fab-info fab fa-git-square fa-2x" title="Git"></i>
@@ -104,89 +109,91 @@
                     <img src="assets/icons/jquery.svg" alt="jQuery" title="jQuery" style="width: 32px" />
                 </div>
             </div>
+
+            <!-- CERTS -->
             <div class="box-cont">
                 <div class="certs-title-cont sub-title-cont">
                     <h3>Certifications</h3>
                     <hr />
                 </div>
-
                 <div class="certs-btn-cont">
                     <button class="certs-btn modal-btns">View All</button>
                 </div>
             </div>
         </div>
+
+        <!-- PROJECTS MODAL -->
         <div class="projects-modal-cont modal">
             <div class="projects-exit-btn-cont exit-cont">
                 <i class="fas fa-times-circle projects-exit-btn exit-btn exit-btn-modal"></i>
             </div>
             <div class="projects-title-cont modal-title-cont">
                 <h2>My Projects</h2>
-                <!-- CARASOUL LOLOL -->
 
-
-
+                <!-- PROJECTS SLIDER -->
                 <div class="slideshow-container">
-
+                    <!-- SLIDE-1 -->
                     <div class="mySlides fade">
                         <div class="numbertext">1 / 10</div>
                         <img src="assets/images/reviews.jpg" style="width:100%">
                         <div class="text">Website Review Example</div>
                     </div>
-
+                    <!-- SLIDE-2 -->
                     <div class="mySlides fade">
                         <div class="numbertext">2 / 10</div>
                         <img src="assets/images/sidebar.jpg" style="width:100%">
                         <div class="text">Interactive Sidebar Example</div>
                     </div>
-
+                    <!-- SLIDE-3 -->
                     <div class="mySlides fade">
                         <div class="numbertext">3 / 10</div>
                         <img src="assets/images/videobackground.jpg" style="width:100%">
                         <div class="text">Video Background Example</div>
                     </div>
-
+                    <!-- SLIDE-4 -->
                     <div class="mySlides fade">
                         <div class="numbertext">4 / 10</div>
                         <img src="assets/images/question.jpg" style="width:100%">
                         <div class="text">Interactive FAQ Example</div>
                     </div>
-
+                    <!-- SLIDE-5 -->
                     <div class="mySlides fade">
                         <div class="numbertext">5 / 10</div>
                         <img src="assets/images/navbartoggle.jpg" style="width:100%">
                         <div class="text">Responsive Navbar Example</div>
                     </div>
-
+                    <!-- SLIDE-6 -->
                     <div class="mySlides fade">
                         <div class="numbertext">6 / 10</div>
                         <img src="assets/images/modal.jpg" style="width:100%">
                         <div class="text">Pop-up Modal Example</div>
                     </div>
-
+                    <!-- SLIDE-7 -->
                     <div class="mySlides fade">
                         <div class="numbertext">7 / 10</div>
                         <img src="assets/images/Meditation.jpg" style="width:100%">
                         <div class="text">My Meditation Project Webapp</div>
                     </div>
-
+                    <!-- SLIDE-8 -->
                     <div class="mySlides fade">
                         <div class="numbertext">8 / 10</div>
                         <img src="assets/images/Hairitagethumb.jpg" style="width:100%">
                         <div class="text">Example Barber Website</div>
                     </div>
-
+                    <!-- SLIDE-9 -->
                     <div class="mySlides fade">
                         <div class="numbertext">9 / 10</div>
                         <img src="assets/images/calcthumb.jpg" style="width:100%">
                         <div class="text">JavaScript Calculator</div>
                     </div>
-
+                    <!-- SLIDE-10 -->
                     <div class="mySlides fade">
                         <div class="numbertext">10 / 10</div>
                         <img src="assets/images/colorflipper.jpg" style="width:100%">
                         <div class="text">JavaScript Color Flipper</div>
                     </div>
 
+                    <!-- SLDE NEXT/PREV BTNS -->
                     <div class="move-slides-btns">
                         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                         <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -194,6 +201,7 @@
                 </div>
                 <br>
 
+                <!-- SLIDE DOTS -->
                 <div style="text-align:center">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
@@ -206,20 +214,17 @@
                     <span class="dot" onclick="currentSlide(9)"></span>
                     <span class="dot" onclick="currentSlide(10)"></span>
                 </div>
-
-
-
-
-
-
-
             </div>
         </div>
+
+        <!-- CONTACT MODAL -->
         <div class="contact-modal-cont modal">
             <div class="contact-exit-btn-cont exit-cont">
                 <i class="fas fa-times-circle contact-exit-btn exit-btn exit-btn-modal"></i>
             </div>
+
             <div class="contact-icon-cont">
+                <!-- CALL ME -->
                 <div class="call-me-cont contact-icons">
                     <h3>Call or Text Me</h3>
                     <i class="card-icon fas fa-phone-square fa-10x"></i>
@@ -235,6 +240,8 @@
                     <input type="text" value="4027085866" id="myPhoneInput">
                     <button class="copy-btn">Copy Number</button>
                 </div>
+
+                <!-- EMAIL ME -->
                 <div class="email-me-cont contact-icons">
                     <h3>Email Me</h3>
                     <i class="card-icon fas fa-envelope-open-text fa-10x"></i>
@@ -250,6 +257,8 @@
                     <input type="text" value="edolly2@protonmail.com" id="myEmailInput">
                     <button class="copy-btn">Copy E-mail</button>
                 </div>
+
+                <!-- WRITE ME -->
                 <div class="write-me-cont contact-icons">
                     <h3>Drop Me a Line</h3>
                     <i class="card-icon fas fa-paper-plane fa-10x"></i>
@@ -271,6 +280,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- CONTACT MODAL SOCIAL MEDIA -->
             <div class="contact-all-social-cont">
                 <h3 class="soci-title">Social Media</h3>
                 <div class="contact-social-cont social-cont">
@@ -293,9 +304,12 @@
         </div>
     </main>
 
+    <!-- FOOTER -->
     <footer class="foot">
+        <!-- COPYRIGHT -->
         <small id="copy">&#169;Copyright 2021 www.Dollyllama.ninja</small>
 
+        <!-- FOOTER SOCIAL MEDIA -->
         <div class="social-cont">
             <a href="https://www.facebook.com/dev.dollinger" alt="My Facebook Page" target="_blank"><i
                     class="fab fa-facebook-square fa-3x soci"></i></a>
@@ -309,6 +323,8 @@
                     class="fab fa-linkedin fa-3x soci"></i></a>
         </div>
     </footer>
+
+    <!-- CERTS -->
     <div class="certs-cont skill-modals">
         <ul class="certs">
             <li><a href="assets/certs/CertificateOfCompletion_Become_FrontEnd_Web_Developer.pdf">FrontEnd Developer Path
@@ -373,6 +389,8 @@
             <p>Go-Back</p>
         </div>
     </div>
+
+    <!-- BIO -->
     <div class="bio-cont skill-modals">
         <p class="bio-p" style="text-indent: 100px;">Hi! I'm Eric. A passionate and dedicated Front-end
             Developer.<br /> I am also, an avid linux user and know the command line very well. GIMP, Inkscape,
@@ -388,6 +406,8 @@
             <p>Go-Back</p>
         </div>
     </div>
+
+    <!-- POPUP WHEN LEAVE -->
     <div id="popup" class="popup-cont">
         <div class="nav-menu-exit-btn-cont">
             <i class="fas fa-times-circle nav-menu-exit-btn popup-exit-btn"></i>
@@ -395,6 +415,8 @@
         <h2>Thank You For Your Interest In Me!</h2>
         <p>I hope to hear from you soon,<br /> and
             your visit is greatly appreciated!</p>
+
+            <!-- POPUP SOCIAL MEDIA -->
         <div class="social-cont popup-social-cont">
             <a href="https://www.facebook.com/dev.dollinger" alt="My Facebook Page" target="_blank"><i
                     class="fab fa-facebook-square fa-3x soci"></i></a>
@@ -407,9 +429,7 @@
             <a href="https://www.linkedin.com/in/eric-dollinger-967876202/" alt="My Linkedin Page" target="_blank"><i
                     class="fab fa-linkedin fa-3x soci"></i></a>
         </div>
-
     </div>
-    <!-- <div id="cursor"></div> -->
 </body>
 
 </html>
