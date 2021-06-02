@@ -42,28 +42,25 @@ $(document).ready(() => {
     //     $(e.target).css({'background-color' : 'rgba(255, 255, 255, 0.05)', 'box-shadow' : '5px 5px 30px rgba(0, 0, 0, 0.2)', 'color' : '#1ceaea'});
     // });
 
-   
+
     $(navLink).on('click', (e) => {
         $(e.currentTarget).add('.selected');
         $(e.currentTarget).css('text-decoration', 'line-through');
     });
 
-    
+
     $(navLink).on('click', (e) => {
         $('.modal').hide(500);
-        if($(e.target).is('#about')) {
+        if ($(e.target).is('#about')) {
             $(aboutModal).show(500);
             $(navMenu).hide(500);
-        }
-        else if($(e.target).is('#projects')) {
+        } else if ($(e.target).is('#projects')) {
             $(projectsModal).show(500);
             $(navMenu).hide(500);
-        }
-        else if($(e.target).is('#contact')) {
+        } else if ($(e.target).is('#contact')) {
             $(contactModal).show(500);
             $(navMenu).hide(500);
-        }
-        else {
+        } else {
             $('.modal').hide(500);
         }
     });
@@ -95,7 +92,7 @@ $(document).ready(() => {
         $(popup).hide(500);
     });
 
-    if($(popup).css('display') == 'block') {
+    if ($(popup).css('display') == 'block') {
         $(navMenu).hide();
     }
 
@@ -112,26 +109,24 @@ $(document).ready(() => {
     });
 
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    
+
     $('.email-me-cont').on('click', () => {
         var email = 'demo@demo.com';
         var subject = 'Test';
         var emailBody = 'Hi Sample,';
         var attach = 'path';
-        if(isMobile) {
-            parent.location = "mailto:"+email+"?subject="+subject+"&body="+emailBody+
-                "?attach="+attach;
-        }
-        else {
+        if (isMobile) {
+            parent.location = "mailto:" + email + "?subject=" + subject + "&body=" + emailBody +
+                "?attach=" + attach;
+        } else {
             $('.email-me-link-cont').show(500);
         }
     });
 
     $('.call-me-cont').on('click', () => {
-        if(isMobile) {
+        if (isMobile) {
             parent.location.href = "tel:402-708-5866";
-        }
-        else {
+        } else {
             $('.call-me-link-cont').show(500);
         }
     });
@@ -141,8 +136,11 @@ $(document).ready(() => {
         $('.write-me-link-cont').show(500);
     });
 
-    var currentMousePos = { x: -1, y: -1 };
-    $(document).mousemove(function(event) {
+    var currentMousePos = {
+        x: -1,
+        y: -1
+    };
+    $(document).mousemove(function (event) {
         currentMousePos.x = event.pageX;
         currentMousePos.y = event.pageY;
         console.log(currentMousePos.x, currentMousePos.y);
@@ -160,9 +158,9 @@ $(document).ready(() => {
 
 function onMouseOut(event) {
     if (event.clientY < 50) {
-    document.removeEventListener("mouseout", onMouseOut);
-    document.getElementById("popup").style.display = "block";
-    document.getElementById("navCont").style.display = "none";
+        document.removeEventListener("mouseout", onMouseOut);
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("navCont").style.display = "none";
     }
 }
 document.addEventListener("mouseout", onMouseOut);
@@ -174,3 +172,35 @@ document.addEventListener("mouseout", onMouseOut);
 // 		} else {
 // 			element.innerHTML = "You are using Desktop";
 // 		}
+
+// SLIDESHOW 
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}

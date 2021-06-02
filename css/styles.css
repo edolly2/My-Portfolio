@@ -288,7 +288,7 @@ footer {
 .soci {
     padding: 2rem 1rem;
     color: white;
-    
+
 }
 
 .soci:hover {
@@ -469,7 +469,7 @@ hr {
 
 .popup-cont h2 {
     padding: 3rem 3rem 7rem 3rem;
-    
+
 }
 
 .popup-exit-btn {
@@ -490,7 +490,9 @@ hr {
     cursor: pointer;
 }
 
-.email-me-link-cont, .call-me-link-cont, .write-me-link-cont {
+.email-me-link-cont,
+.call-me-link-cont,
+.write-me-link-cont {
     display: none;
     position: absolute;
     left: 50%;
@@ -507,7 +509,7 @@ hr {
 
 .selected {
     background-color: #1ceaea;
-    color: yellow; 
+    color: yellow;
     box-shadow: inset 0 0 2rem black;
 }
 
@@ -524,3 +526,135 @@ hr {
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
 } */
+
+/* SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: 4rem auto 0 auto;
+    
+    
+    
+}
+
+.move-slides-btns{
+    position: absolute;
+    right:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    /* position: absolute; */
+    /* top: 50%; */
+    width: auto;
+    padding: 16px;
+    margin: 0 2rem;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    /* transition: 0.6s ease; */
+    border-radius: 50%;
+    user-select: none;
+    border: 2px solid transparent;
+}
+
+/* Position the "next button" to the right */
+.next {
+    margin-left: 50%;
+    right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: #1ceaea;
+    color: yellow;
+    box-shadow: inset 0 0 10px black;
+    border: 2px solid rgb(0, 1, 61);
+    
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #1ceaea;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: yellow;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
