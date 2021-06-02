@@ -134,7 +134,7 @@ body {
 }
 
 .logo {
-    width: 10rem;
+    width: clamp(5rem, 7.5vw, 11rem);
     height: auto;
 }
 
@@ -160,7 +160,7 @@ body {
 
 .home-title-cont {
     text-align: center;
-    padding: 5rem;
+    padding: 0 5rem 7rem 5rem;
 }
 
 #home-title {
@@ -169,13 +169,14 @@ body {
 
 .home-main-p-cont {
     text-align: center;
-    width: 50%;
-    margin-left: 50%;
+    width: 100%;
+    /* margin-left: 50%; */
 
 }
 
 .home-main-p {
-    padding-right: 3rem;
+    padding-right: 7rem;
+    width: 100%;
 }
 
 .nav-menu-cont {
@@ -265,14 +266,14 @@ body {
 
 
 footer {
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    bottom: 3rem;
     display: flex;
     width: 100%;
 }
 
 #copy {
-    position: fixed;
+    position: absolute;
     bottom: 1rem;
     left: 3rem;
     text-shadow: none;
@@ -288,6 +289,7 @@ footer {
 .soci {
     padding: 2rem 1rem;
     color: white;
+    /* font-size: clamp(3rem, 3.6vw, 6rem); */
 
 }
 
@@ -656,5 +658,37 @@ hr {
     .next,
     .text {
         font-size: 11px
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .nav-menu-cont {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .nav-menu-cont {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #copy {
+        display: none;
+    }
+
+    .social-cont {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .home-main-p-cont {
+        /* width: 70%;
+        margin-left: 25%; */
     }
 }

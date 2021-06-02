@@ -141,6 +141,7 @@ $(document).ready(() => {
         y: -1
     };
     $(document).mousemove(function (event) {
+
         currentMousePos.x = event.pageX;
         currentMousePos.y = event.pageY;
         console.log(currentMousePos.x, currentMousePos.y);
@@ -157,11 +158,12 @@ $(document).ready(() => {
 // }
 
 function onMouseOut(event) {
-    if (event.clientY < 50) {
+    if(event.clientY < 50 && window.screen.width > 768) {
         document.removeEventListener("mouseout", onMouseOut);
         document.getElementById("popup").style.display = "block";
         document.getElementById("navCont").style.display = "none";
     }
+    
 }
 document.addEventListener("mouseout", onMouseOut);
 
