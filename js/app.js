@@ -56,7 +56,7 @@ hide(emailMeExit, emailMeLink);
 showHide(modalExitBtn, navMenu, modal);
 showHide(gobackBtn, aboutModal, certs);
 
-$('.skill-modals').hide();
+// $('.skill-modals').hide();
 showHide(gobackBtn2, aboutModal, bio);
 
     $(navMenuEnter).on('click', () => {

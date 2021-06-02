@@ -333,6 +333,8 @@ footer {
     color: yellow;
 }
 
+
+
 .bio-cont {
     text-align: center;
 }
@@ -535,6 +537,7 @@ hr {
     width: 100%;
     height: 100%;
     display: none;
+    
 }
 
 
@@ -713,7 +716,17 @@ hr {
         left: 0;
     }
 
-    /* .please-rotate {
-        display: block;
-    } */
+    .please-rotate {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .please-rotate p {
+
+    }
 }
+
+.skill-modals {
+    display:none;
+}
+
