@@ -8,11 +8,13 @@
 }
 
 html {
-    /* width: 100%;
-    height: 100%; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 body {
+    position: relative;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -542,15 +544,15 @@ hr {
     max-width: 1000px;
     position: relative;
     margin: 4rem auto 0 auto;
-    
-    
-    
+
+
+
 }
 
-.move-slides-btns{
+.move-slides-btns {
     position: absolute;
-    right:0;
-    top:0;
+    right: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -589,7 +591,7 @@ hr {
     color: yellow;
     box-shadow: inset 0 0 10px black;
     border: 2px solid rgb(0, 1, 61);
-    
+
 }
 
 /* Caption text */

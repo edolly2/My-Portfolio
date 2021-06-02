@@ -111,9 +111,9 @@ $(document).ready(() => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     $('.email-me-cont').on('click', () => {
-        var email = 'demo@demo.com';
-        var subject = 'Test';
-        var emailBody = 'Hi Sample,';
+        var email = 'edolly2@protonmail.com';
+        var subject = 'Your Portfolio';
+        var emailBody = 'Hi, my name is ';
         var attach = 'path';
         if (isMobile) {
             parent.location = "mailto:" + email + "?subject=" + subject + "&body=" + emailBody +
