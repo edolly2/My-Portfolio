@@ -60,7 +60,7 @@
         <!-- NAV MENU -->
         <div class="nav-menu-cont" id="navCont">
             <div class="nav-menu-exit-btn-cont">
-                <i class="fas fa-times-circle nav-menu-exit-btn"></i>
+                <i class="fas fa-times-circle nav-menu-exit-btn exit-btn"></i>
             </div>
             <nav class="nav-menu">
                 <ul>
@@ -80,53 +80,55 @@
                 <h2>About Me</h2>
             </div>
 
-            <!-- BIO -->
-            <div class="box-cont">
-                <div class="bio-title-cont sub-title-cont">
-                    <h3>My Bio</h3>
-                    <hr />
-                </div>
-                <div class="bio-btn-cont">
-                    <button class="bio-btn modal-btns">View Bio</button>
-                </div>
-            </div>
-
-            <!-- SKILLS -->
-            <div class="skills-cont box-cont">
-                <div class="skills-title-cont sub-title-cont">
-                    <h3>Areas of Knowledge</h3>
-                    <hr />
+            <div class="about-boxes-cont">
+                <!-- BIO -->
+                <div class="box-cont">
+                    <div class="bio-title-cont sub-title-cont">
+                        <h3>My Bio</h3>
+                        <hr />
+                    </div>
+                    <div class="bio-btn-cont">
+                        <button class="bio-btn modal-btns">View Bio</button>
+                    </div>
                 </div>
 
-                <!-- SKILLS ICONS -->
-                <div class="skills-cont">
-                    <i class="fab-info fab fa-github-alt fa-2x" title="GitHub"></i>
-                    <i class="fab-info fab fa-git-square fa-2x" title="Git"></i>
-                    <i class="fab-info fab fa-css3-alt fa-2x" title="CSS3"></i>
-                    <i class="fab-info fab fa-bootstrap fa-2x" title="Bootstrap"></i>
-                    <i class="fab-info fab fa-linux fa-2x" title="Linux"></i>
-                    <i class="fab-info fab fa-python fa-2x" title="Python2/3"></i>
-                    <i class="fab-info fab fa-html5 fa-2x" title="HTML5"></i>
-                    <i class="fab-info fab fa-js-square fa-2x" title="JavaScript"></i>
-                    <i class="fab-info fab fa-node-js fa-2x" title="NodeJS"></i>
-                    <i class="fab-info fab fa-sass fa-2x" title="SASS"></i>
-                    <i class="fab-info fab fa-react fa-2x" title="ReactJS"></i>
-                    <i class="fab-info fab fa-npm fa-2x" title="npm"></i>
-                    <img src="assets/icons/redux.svg" alt="redux" title="redux" />
-                    <img src="assets/icons/gimp.svg" alt="GIMP" title="GIMP" />
-                    <img src="assets/icons/inkscape.svg" alt="Inkscape" title="Inkscape" />
-                    <img src="assets/icons/jquery.svg" alt="jQuery" title="jQuery" style="width: 32px" />
-                </div>
-            </div>
+                <!-- SKILLS -->
+                <div class="skills-cont box-cont">
+                    <div class="skills-title-cont sub-title-cont">
+                        <h3>Areas of Knowledge</h3>
+                        <hr />
+                    </div>
 
-            <!-- CERTS -->
-            <div class="box-cont">
-                <div class="certs-title-cont sub-title-cont">
-                    <h3>Certifications</h3>
-                    <hr />
+                    <!-- SKILLS ICONS -->
+                    <div class="skills-cont">
+                        <i class="fab-info fab fa-github-alt fa-2x" title="GitHub"></i>
+                        <i class="fab-info fab fa-git-square fa-2x" title="Git"></i>
+                        <i class="fab-info fab fa-css3-alt fa-2x" title="CSS3"></i>
+                        <i class="fab-info fab fa-bootstrap fa-2x" title="Bootstrap"></i>
+                        <i class="fab-info fab fa-linux fa-2x" title="Linux"></i>
+                        <i class="fab-info fab fa-python fa-2x" title="Python2/3"></i>
+                        <i class="fab-info fab fa-html5 fa-2x" title="HTML5"></i>
+                        <i class="fab-info fab fa-js-square fa-2x" title="JavaScript"></i>
+                        <i class="fab-info fab fa-node-js fa-2x" title="NodeJS"></i>
+                        <i class="fab-info fab fa-sass fa-2x" title="SASS"></i>
+                        <i class="fab-info fab fa-react fa-2x" title="ReactJS"></i>
+                        <i class="fab-info fab fa-npm fa-2x" title="npm"></i>
+                        <img src="assets/icons/redux.svg" alt="redux" title="redux" />
+                        <img src="assets/icons/gimp.svg" alt="GIMP" title="GIMP" />
+                        <img src="assets/icons/inkscape.svg" alt="Inkscape" title="Inkscape" />
+                        <img src="assets/icons/jquery.svg" alt="jQuery" title="jQuery" style="width: 32px" />
+                    </div>
                 </div>
-                <div class="certs-btn-cont">
-                    <button class="certs-btn modal-btns">View All</button>
+
+                <!-- CERTS -->
+                <div class="box-cont">
+                    <div class="certs-title-cont sub-title-cont">
+                        <h3>Certifications</h3>
+                        <hr />
+                    </div>
+                    <div class="certs-btn-cont">
+                        <button class="certs-btn modal-btns">View All</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -288,7 +290,7 @@
                                 <input type="text" name="email" id="email"><br />
                                 <label for="comments">Comments</label><br />
                                 <textarea name="comments" id="comments" cols="30" rows="10"></textarea><br />
-                                <input type="submit" value="Send">
+                                <input type="submit" value="Send" id="submit">
                             </form>
                         </div>
                     </div>

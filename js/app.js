@@ -50,6 +50,7 @@ $(document).ready(() => {
     show(bioBtn, bio);
     show(writeMeCont, writeMeLinkCont);
 
+    hide($('.write-me-exit-btn'), writeMeLinkCont);
     hide(popupExit, popup);
     hide(emailMeExit, emailMeLink);
 

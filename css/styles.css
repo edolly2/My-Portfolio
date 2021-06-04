@@ -225,6 +225,10 @@ body {
     text-align: center;
 }
 
+.nav-menu ul {
+    padding-top: 3rem;
+}
+
 .nav-link {
     padding: 3rem 0;
     background: rgba(255, 255, 255, 0.05);
@@ -340,7 +344,19 @@ footer {
 }
 
 .bio-p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     padding: 3rem;
+    width: 90vw;
+}
+
+.about-boxes-cont {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .certs-cont,
@@ -432,6 +448,10 @@ hr {
 .contact-icon-cont {
     display: flex;
     justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .contact-icons {
@@ -518,6 +538,43 @@ hr {
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
     border-radius: 1.2rem;
 }
+
+.exit-btn {
+    padding: 1rem;
+}
+
+.write-me-link-cont {
+    padding: 1rem;
+    background-color: #00013d;
+}
+
+.write-me-exit-btn {
+    padding: 0;
+}
+
+input,
+textarea {
+    margin-bottom: 1rem;
+    border-radius: 0.6rem;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 0 1px yellow;
+}
+
+#submit {
+    background-color: #1ceaea;
+    border: 2px solid transparent;
+}
+
+#submit:hover {
+    border: 2px solid yellow;
+}
+
+
+
+
 
 .selected {
     background-color: #1ceaea;
@@ -662,7 +719,7 @@ hr {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color:#00013d;
+    background-color: #00013d;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -722,7 +779,7 @@ hr {
     .text {
         font-size: 11px
     }
-    
+
 }
 
 @media screen and (max-width: 850px) {
@@ -755,6 +812,7 @@ hr {
         /* width: 70%;
         margin-left: 25%; */
     }
+
     .slideshow-container {
         min-width: 85vw;
     }
@@ -787,8 +845,9 @@ hr {
 
 @media screen and (max-width: 440px) {
     .contact-all-social-cont {
-        position: relative;
+        position: absolute;
         left: 0;
+        bottom: 1rem;
         display: flex;
     }
 
