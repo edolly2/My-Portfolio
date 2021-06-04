@@ -128,19 +128,6 @@ $(document).ready(() => {
     });
 
 
-
-
-    var currentMousePos = {
-        x: -1,
-        y: -1
-    };
-    $(document).mousemove(function (event) {
-
-        currentMousePos.x = event.pageX;
-        currentMousePos.y = event.pageY;
-        console.log(currentMousePos.x, currentMousePos.y);
-    });
-
     $('#contact').on('click', () => {
         if($(window).width() <= 440) {
             $('.contact-icon-cont').css('display', 'grid');
