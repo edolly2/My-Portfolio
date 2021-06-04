@@ -46,18 +46,18 @@ function showHide(whatClick, whatShow, whatHide) {
 
 // JQUERY
 $(document).ready(() => {
-show(certsBtn, certs);
-show(bioBtn, bio);
-show(writeMeCont,writeMeLinkCont);
+    show(certsBtn, certs);
+    show(bioBtn, bio);
+    show(writeMeCont, writeMeLinkCont);
 
-hide(popupExit, popup);
-hide(emailMeExit, emailMeLink);
+    hide(popupExit, popup);
+    hide(emailMeExit, emailMeLink);
 
-showHide(modalExitBtn, navMenu, modal);
-showHide(gobackBtn, aboutModal, certs);
+    showHide(modalExitBtn, navMenu, modal);
+    showHide(gobackBtn, aboutModal, certs);
 
-// $('.skill-modals').hide();
-showHide(gobackBtn2, aboutModal, bio);
+    // $('.skill-modals').hide();
+    showHide(gobackBtn2, aboutModal, bio);
 
     $(navMenuEnter).on('click', () => {
         $(navMenu).show(500);
@@ -115,6 +115,8 @@ showHide(gobackBtn2, aboutModal, bio);
         } else {
             $('.email-me-link-cont').show(500);
         }
+
+
     });
 
     $('.call-me-cont').on('click', () => {
@@ -126,7 +128,7 @@ showHide(gobackBtn2, aboutModal, bio);
     });
 
 
-    
+
 
     var currentMousePos = {
         x: -1,
@@ -139,18 +141,28 @@ showHide(gobackBtn2, aboutModal, bio);
         console.log(currentMousePos.x, currentMousePos.y);
     });
 
+    $('#contact').on('click', () => {
+        if($(window).width() <= 440) {
+            $('.contact-icon-cont').css('display', 'grid');
+            $('.contact-icon-cont').css('grid-template-columns', '1fr');
+        } else {
+            return;
+        }
+    });
 });
 
 // VANILLA JAVASCRIPT
 function onMouseOut(event) {
-    if(event.clientY < 50 && window.screen.width > 768) {
+    if (event.clientY < 50 && window.screen.width > 768) {
         document.removeEventListener("mouseout", onMouseOut);
         document.getElementById("popup").style.display = "block";
         document.getElementById("navCont").style.display = "none";
     }
-    
+
 }
 document.addEventListener("mouseout", onMouseOut);
+
+
 
 // SLIDESHOW 
 var slideIndex = 1;
