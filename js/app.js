@@ -9,7 +9,10 @@ const contactModal = $('.contact-modal-cont');
 const aboutExitBtn = $('.about-exit-btn');
 const projectsExitBtn = $('.projects-exit-btn');
 const contactExitBtn = $('.contact-exit-btn');
+const pcCertsExitBtn = $('.pc-certs-exit-btn-cont');
 const certs = $('.certs-cont');
+const mobileCertsExitBtn = $('.mobile-certs-exit-btn-cont');
+const certsMobile = $('.certs-mobile-cont');
 const certsBtn = $('.certs-btn');
 const gobackBtn = $('.goback-btn-cont');
 const gobackBtn2 = $('.goback-btn-cont2');
@@ -23,6 +26,8 @@ const writeMeCont = $('.write-me-cont');
 const writeMeLinkCont = $('.write-me-link-cont');
 const modal = $('.modal');
 const modalExitBtn = $('.exit-btn-modal');
+const isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
+
 
 // FUNCTIONS
 function hide(whatClick, whatHide) {
@@ -55,12 +60,13 @@ $(document).ready(() => {
     hide(emailMeExit, emailMeLink);
 
     showHide(modalExitBtn, navMenu, modal);
-    showHide(gobackBtn, aboutModal, certs);
+    showHide(pcCertsExitBtn, aboutModal, certs);
+    showHide(mobileCertsExitBtn, aboutModal, certsMobile);
 
     // $('.skill-modals').hide();
     showHide(gobackBtn2, aboutModal, bio);
 
-    $(certsBtn).on('click',() => {
+    $(certsBtn).on('click', () => {
         $(certs).css('display', 'flex');
     });
 
@@ -107,7 +113,6 @@ $(document).ready(() => {
         $('.soci-title').css('color', 'white');
     });
 
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     $('.email-me-cont').on('click', () => {
         var email = 'edolly2@protonmail.com';
@@ -134,18 +139,37 @@ $(document).ready(() => {
 
 
     $('#contact').on('click', () => {
-        if($(window).width() <= 440) {
+        if ($(window).width() <= 440) {
             $('.contact-icon-cont').css('display', 'grid');
             $('.contact-icon-cont').css('grid-template-columns', '1fr');
         } else {
             return;
         }
     });
+
+    $(certsBtn).on('click', () => {
+        if ($(window).width() < 768) {
+            console.log('ismobile');
+            $(certsMobile).show(500);
+            $(certs).hide();
+        } else {
+            console.log('isnotmboile');
+            $(certsMobile).hide();
+            $(certs).show(500);
+            $(certs).css('display', 'flex');
+        }
+    });
+
+    $(window).bind('beforeunload', function () {
+        $('.popup').css('display', 'block');
+        $('.navCont').css('display', 'none');
+    });
+
 });
 
 // VANILLA JAVASCRIPT
 function onMouseOut(event) {
-    if (event.clientY < 50 && window.screen.width > 768) {
+    if (event.clientY < 50 && event.clientX > 1000 && window.screen.width > 768) {
         document.removeEventListener("mouseout", onMouseOut);
         document.getElementById("popup").style.display = "block";
         document.getElementById("navCont").style.display = "none";

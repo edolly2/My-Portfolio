@@ -362,7 +362,6 @@ footer {
 .certs-cont,
 .bio-cont {
     display: none;
-    display: flex;
     position: absolute;
     top: 0;
     z-index: 4;
@@ -903,3 +902,35 @@ textarea:focus {
     }
 
 
+.certs-mobile-cont {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 10;
+    background-color: #fff;
+}
+
+.certs-mobile-list {
+    display: none;
+} 
+
+.certs-cont {
+    justify-content: center;
+}
+
+.certs li a {
+    font-size: 1.4rem;
+}
+
+/* .goback-btn-cont {
+    position: relative;
+} */
+
+.pc-certs-exit-btn-cont, .mobile-certs-exit-btn-cont {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
