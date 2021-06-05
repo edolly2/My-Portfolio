@@ -346,8 +346,8 @@ footer {
 .bio-p {
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    transform: translate(-50%, -30%);
     padding: 3rem;
     width: 90vw;
 }
@@ -872,10 +872,34 @@ textarea:focus {
         width: auto;
     }
 
-
+}
 
     @media screen and (max-width: 420px) and (min-height: 720px) {
         .contact-social-cont {
             padding-top: 10rem;
         }
     }
+
+    @media screen and (max-width: 768px) {
+        body {
+            background-image: url('../assets/images/lg-bcground.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        p {
+            font-size: 1.6rem;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        body {
+            background-image: url('../assets/images/mobile-bcground.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+
