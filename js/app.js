@@ -60,6 +60,10 @@ $(document).ready(() => {
     // $('.skill-modals').hide();
     showHide(gobackBtn2, aboutModal, bio);
 
+    $(certsBtn).on('click',() => {
+        $(certs).css('display', 'flex');
+    });
+
     $(navMenuEnter).on('click', () => {
         $(navMenu).show(500);
         $(navMenuEnter).fadeOut(500);

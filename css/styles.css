@@ -841,6 +841,7 @@ textarea:focus {
 
 .skill-modals {
     display: none;
+    
 }
 
 @media screen and (max-width: 440px) {
