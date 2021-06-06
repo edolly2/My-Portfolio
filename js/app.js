@@ -188,10 +188,6 @@ $(document).ready(() => {
 
 
     $(isFocus).focusin(() => {
-        bullshit();
-        if(!$('.please-rotate').hasClass('hide')) {
-            $('.please-rotate').addClass('hide');
-        }
         $('.please-rotate').addClass('hide');
     });
 
