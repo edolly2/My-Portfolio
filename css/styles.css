@@ -929,7 +929,7 @@ textarea:focus {
     position: relative;
 } */
 
-.pc-certs-exit-btn-cont, .mobile-certs-exit-btn-cont {
+.pc-certs-exit-btn-cont, .mobile-certs-exit-btn-cont, .bio-exit-btn-cont {
     position: absolute;
     right: 1rem;
     top: 1rem;

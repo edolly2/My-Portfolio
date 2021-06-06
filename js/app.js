@@ -14,8 +14,7 @@ const certs = $('.certs-cont');
 const mobileCertsExitBtn = $('.mobile-certs-exit-btn-cont');
 const certsMobile = $('.certs-mobile-cont');
 const certsBtn = $('.certs-btn');
-const gobackBtn = $('.goback-btn-cont');
-const gobackBtn2 = $('.goback-btn-cont2');
+const bioExitBtn = $('.bio-exit-btn-cont');
 const bioBtn = $('.bio-btn');
 const bio = $('.bio-cont');
 const popupExit = $('.popup-exit-btn');
@@ -64,7 +63,7 @@ $(document).ready(() => {
     showHide(mobileCertsExitBtn, aboutModal, certsMobile);
 
     // $('.skill-modals').hide();
-    showHide(gobackBtn2, aboutModal, bio);
+    showHide(bioExitBtn, aboutModal, bio);
 
     $(certsBtn).on('click', () => {
         $(certs).css('display', 'flex');
@@ -169,7 +168,7 @@ $(document).ready(() => {
 
 // VANILLA JAVASCRIPT
 function onMouseOut(event) {
-    if (event.clientY < 50 && event.clientX > 1000 && window.screen.width > 768) {
+    if (event.clientY < 1 && event.clientX > 1000 && window.screen.width > 768) {
         document.removeEventListener("mouseout", onMouseOut);
         document.getElementById("popup").style.display = "block";
         document.getElementById("navCont").style.display = "none";
