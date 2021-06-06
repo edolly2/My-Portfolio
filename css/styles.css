@@ -478,6 +478,7 @@ hr {
     position: fixed;
     bottom: 1rem;
     right: 0;
+    z-index: 10;
 }
 
 .popup-cont {
@@ -536,6 +537,7 @@ hr {
     border-left: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
     border-radius: 1.2rem;
+    
 }
 
 .exit-btn {
@@ -545,6 +547,7 @@ hr {
 .write-me-link-cont {
     padding: 1rem;
     background-color: #00013d;
+    z-index: 11;
 }
 
 .write-me-exit-btn {

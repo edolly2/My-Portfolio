@@ -167,7 +167,9 @@ $(document).ready(() => {
 
     $(isFocus).on('focus', () => {
         $('.please-rotate').hide();
+        // $('.contact-social-cont').css('display', 'none');
     });
+    
 
 });
 
