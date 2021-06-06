@@ -31,6 +31,15 @@ const isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
 
 
 // FUNCTIONS
+
+function bullshit() {
+    if ($(window).width() > $(window).height()) {
+        $('.please-rotate').removeClass('hide');
+    } else if ($(window).width() < $(window).height()) {
+        $('.please-rotate').addClass('hide');
+    }
+}
+
 function hide(whatClick, whatHide) {
     $(whatClick).on('click', () => {
         $(whatHide).hide(500);
@@ -52,6 +61,7 @@ function showHide(whatClick, whatShow, whatHide) {
 
 // JQUERY
 $(document).ready(() => {
+    bullshit();
     show(certsBtn, certs);
     show(bioBtn, bio);
     showHide(writeMeCont, writeMeLinkCont, contactSocial);
@@ -166,36 +176,31 @@ $(document).ready(() => {
         $('.navCont').css('display', 'none');
     });
 
-    $(window).on('load', () => {
-        if ($(window).width() > $(window).height()) {
-            $('.please-rotate').show();
-        }
-        else {
-            $('.please-rotate').hide();
-        }
-    })
-    $('.please-rotate').css('display', 'none');
+    // $(window).on('load', () => {
+    //     if ($(window).width() > $(window).height()) {
+    //         $('.please-rotate').show();
+    //     }
+    //     else {
+    //         $('.please-rotate').hide();
+    //     }
+    // })
+    // $('.please-rotate').css('display', 'none');
 
 
     $(isFocus).focusin(() => {
-        $('.please-rotate').hide();
-        // }) && $(window).width() > $(window).height()) {
-        //     $('.please-rotate').css('display', 'none');
-        // }
-        // else if($(isFocus).focusout() && $(window).width() < $(window).height()) {
-        //     $('.please-rotate').css('display', 'flex');
-        // }
-        // else {
-        //     return;
-        // }
-        // $('.contact-social-cont').css('display', 'none');
-    });
-    $(isFocus).focusout(() => {
-        if ($(window).width() > $(window).height()) {
-            $('.please-rotate').show();
+        bullshit();
+        if(!$('.please-rotate').hasClass('hide')) {
+            $('.please-rotate').addClass('hide');
         }
-
     });
+
+    $(isFocus).focusout(() => {
+        bullshit();
+    });
+    
+    bullshit();
+
+    // });
     // $(window).width(() => {
     //     let height = $(window).height();
     //     let width = $(window).width();
@@ -234,9 +239,20 @@ $(document).ready(() => {
     //         $('.please-rotate').css('display', 'flex');
     //     }
     // });
-    $(isFocus).on('change', () => {
-        console.log('changed');
-    })
+    // $(isFocus).on('change', () => {
+    //     console.log('changed');
+    // })
+
+
+
+    $(window).resize(() => {
+        if ($(window).width() > $(window).height()) {
+            $('.please-rotate').removeClass('hide');
+        } else if ($(window).width() < $(window).height()) {
+            $('.please-rotate').addClass('hide');
+        }
+    });
+    bullshit();
 
 });
 
