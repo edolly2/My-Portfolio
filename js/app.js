@@ -132,10 +132,9 @@ $(document).ready(() => {
         var email = 'edolly2@protonmail.com';
         var subject = 'Your Portfolio';
         var emailBody = 'Hi, my name is ';
-        var attach = 'path';
+        // var attach = 'path';
         if (isMobile) {
-            parent.location = "mailto:" + email + "?subject=" + subject + "&body=" + emailBody +
-                "?attach=" + attach;
+            parent.location = "mailto:" + email + "?subject=" + subject + "&body=" + emailBody;
         } else {
             $('.email-me-link-cont').show(500);
         }
@@ -186,11 +185,6 @@ $(document).ready(() => {
 
     $(window).resize(() => {
         bullshit();
-        // if ($(window).width() > $(window).height()) {
-        //     $('.please-rotate').removeClass('hide');
-        // } else if ($(window).width() < $(window).height()) {
-        //     $('.please-rotate').addClass('hide');
-        // }
     });
     bullshit();
 
@@ -219,54 +213,8 @@ $(document).ready(() => {
         bullshit();
     });
 
-    // bullshit();
-
-    // });
-    // $(window).width(() => {
-    //     let height = $(window).height();
-    //     let width = $(window).width();
-    //     if (width < height || $(isFocus).is(':focus')) {
-    //         $('.please-rotate').css('display', 'none')
-    //     } else {
-    //         $('.please-rotate').css('display', 'flex');
-    //     }
-    // })
-    // $(window).width(() => {
-
-    //     if (width > height) {
-    //         $('.please-rotate').css('display', 'flex');
-    //     }
-    // let height = $(window).height();
-    // let width = $(window).width();
-    // $(window).on('load', () => {
-    //     if($(height > width)) {
-    //         $('.please-rotate').css('display', 'none')
-    //     }
-    //     else if(width > height) {
-    //         $('.please-rotate').css('display', 'flex');
-    //     }
-    // })
     let height = $(window).height();
     let width = $(window).width();
-    // $(window).on('load', () => {
-    //     if(height < width) {
-    //         $('.please-rotate').css('display', 'flex');
-    //     }
-    // });
-    // $(window).resize(() => {
-    //     if($(isFocus).is(':focus') || width < height) {
-    //         $('.please-rotate').css('display', 'none');
-    //     } else if(width > height) {
-    //         $('.please-rotate').css('display', 'flex');
-    //     }
-    // });
-    // $(isFocus).on('change', () => {
-    //     console.log('changed');
-    // })
-
-
-
-
 });
 
 // VANILLA JAVASCRIPT
