@@ -166,7 +166,7 @@ $(document).ready(() => {
     });
 
     $(isFocus).on('focus', () => {
-        $('#popup').hide();
+        $('.please-rotate').hide();
     });
 
 });
