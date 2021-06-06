@@ -24,6 +24,7 @@ const emailMeLink = $('.email-me-link-cont');
 const writeMeCont = $('.write-me-cont');
 const writeMeLinkCont = $('.write-me-link-cont');
 const modal = $('.modal');
+const isFocus = $('.is-focus');
 const modalExitBtn = $('.exit-btn-modal');
 const isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
 
@@ -162,6 +163,10 @@ $(document).ready(() => {
     $(window).bind('beforeunload', function () {
         $('.popup').css('display', 'block');
         $('.navCont').css('display', 'none');
+    });
+
+    $(isFocus).on('focus', () => {
+        $('#popup').hide();
     });
 
 });
