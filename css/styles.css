@@ -207,7 +207,7 @@ body {
 .exit-btn,
 .goback-btn,
 .goback-btn2 {
-    padding: 3rem;
+    padding: 1rem;
 }
 
 .nav-menu-exit-btn:hover,
@@ -524,21 +524,16 @@ hr {
     cursor: pointer;
 }
 
-.email-me-link-cont,
-.call-me-link-cont,
-.write-me-link-cont {
+.links-cont {
     display: none;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 1, 61, 0.9);
     border-radius: 1.2rem;
+    width: 50vw;
+    height: 50vh;
 
 }
 
@@ -564,7 +559,7 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus, #myPhoneInput:focus {
     box-shadow: 0 0 0 1px yellow;
 }
 
@@ -841,7 +836,10 @@ textarea:focus {
 
 .hide {
     display: none;
+
 }
+
+
 
 @media screen and (orientation: landscape) {
     .please-rotate {
@@ -952,3 +950,68 @@ textarea:focus {
     right: 1rem;
     top: 1rem;
 }
+
+.call-btn, .copy-btn, .email-btn {
+    /* border: 2px solid transparent; */
+    border-radius: 0.6rem;
+    background-color: #1ceaea;
+    box-shadow: inset 0 0 10px black;
+}
+.copy-btn {
+    font-size: clamp(1.8rem, 1.8vw, 3rem);
+    color: -webkit-link;
+}
+
+.call-btn:hover, .copy-btn:hover, .email-btn:hover {
+    background-color: yellow;
+    border: 2px solid yellow;
+}
+
+#myPhoneInput, #myEmailInput {
+    font-size: 1.6rem;
+    text-align: center;
+    outline: none;
+}
+
+.or {
+    /* padding: 1rem; */
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+

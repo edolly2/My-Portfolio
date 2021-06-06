@@ -23,6 +23,9 @@ const emailMeExit = $('.email-me-exit-btn');
 const emailMeLink = $('.email-me-link-cont');
 const writeMeCont = $('.write-me-cont');
 const writeMeLinkCont = $('.write-me-link-cont');
+const callMeCont = $('.call-me-cont');
+const callMeExitBtn = $('.call-me-exit-btn-cont');
+const callMeLinkCont = $('.call-me-link-cont');
 const contactSocial = $('.contact-all-social-cont');
 const modal = $('.modal');
 const isFocus = $('.is-focus');
@@ -33,12 +36,12 @@ const isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
 // FUNCTIONS
 
 function bullshit() {
-    if($(window).width() > 768 && $(window).width() > $(window).height()) {
+    if ($(window).width() > 768 && $(window).width() > $(window).height()) {
         $('.please-rotate').addClass('hide');
     } else if ($(window).width() > $(window).height()) {
         $('.please-rotate').removeClass('hide');
     }
-    if($(window).width() < $(window).height()) {
+    if ($(window).width() < $(window).height()) {
         $('.please-rotate').addClass('hide');
     }
 }
@@ -143,10 +146,18 @@ $(document).ready(() => {
     });
 
     $('.call-me-cont').on('click', () => {
-        if (isMobile) {
+        if ($(width) < 640) {
             parent.location.href = "tel:402-708-5866";
         } else {
-            $('.call-me-link-cont').show(500);
+            $(callMeLinkCont).show(500);
+        }
+    });
+
+    $('.email-me-cont').on('click', () => {
+        if ($(width) < 640) {
+            parent.location.href = "mailto:edolly2@protonmail.com";
+        } else {
+            $(emailMeLink).show(500);
         }
     });
 
@@ -215,9 +226,52 @@ $(document).ready(() => {
 
     let height = $(window).height();
     let width = $(window).width();
+
+    $(callMeCont).on('click', () => {
+        $(callMeLinkCont).show(500);
+        $(contactExitBtn).hide(500);
+    });
+    $(callMeExitBtn).on('click', () => {
+        $(callMeLinkCont).hide(500);
+        $(contactExitBtn).show(500);
+    });
 });
 
 // VANILLA JAVASCRIPT
+
+// let copyBtn = document.getElementsByClassName('copy-btn').addEventListener('click', () => {
+//     let copyText = document.getElementById("myPhoneInput");
+//     copyText.select();
+//     copyText.setSelectionRange(0, 99999);
+//     document.execCommand("copy");
+//     alert("Copied the text: " + copyText.value);
+// });
+
+// function copyToClipboard(element) {
+//     var $temp = $("<input>");
+//     $("body").append($temp);
+//     $temp.val($(element).text()).select();
+//     document.execCommand("copy");
+//     $temp.remove();
+//   }
+
+
+function copyPhone() {
+    var copyPhone = document.getElementById("myPhoneInput").select();
+    document.execCommand('copy');
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copied: " + copyPhone.value;
+}
+function outFunc() {
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copy to clipboard";
+  }
+
+function copyEmail() {
+    document.getElementById("myEmailInput").select();
+    document.execCommand('copy');
+}
+
 function onMouseOut(event) {
     if (event.clientY < 1 && event.clientX > 1000 && window.screen.width > 768) {
         document.removeEventListener("mouseout", onMouseOut);

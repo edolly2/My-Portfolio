@@ -17,6 +17,7 @@
     <link rel="canonical" href="index.html">
     <title>Eric Dollinger's Portfolio</title>
     <link rel="stylesheet" href="css/RESET.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="assets/typography/typography.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
@@ -244,16 +245,25 @@
                         <h3>Call or Text Me</h3>
                         <i class="card-icon fas fa-phone-square fa-10x"></i>
                     </div>
-                    <div class="call-me-link-cont">
-                        <div class="contact-exit-btn-cont exit-cont">
+                    <div class="call-me-link-cont links-cont">
+                        <div class="call-me-exit-btn-cont exit-cont">
                             <i class="fas fa-times-circle call-me-exit-btn exit-btn"></i>
                         </div>
                         <p>Call/Text In Default Phone Client</p>
-                        <button><a href="tel:402-708-5866" id="pnum">Call/Text</a></button>
-                        <p>-OR-</p>
+                        <button class="call-btn"><a href="tel:402-708-5866" id="pnum">Call/Text</a></button>
+                        <hr />
+                        <p class="or">-OR-</p>
+                        <hr />
                         <p>Copy Phone Number to clipboard</p>
-                        <input type="text" value="4027085866" id="myPhoneInput">
-                        <button class="copy-btn">Copy Number</button>
+                        <input type="text" value="4027085866" id="myPhoneInput" readonly><br />
+
+                        <div class="tooltip">
+                            <button onclick="copyPhone()" onmouseout="outFunc()">
+                                <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                Copy Number
+                            </button>
+                        </div>
+                        <!-- <button class="copy-phone-btn copy-btn" onclick="copyPhone();">Copy Number</button> -->
                     </div>
 
                     <!-- EMAIL ME -->
@@ -261,16 +271,16 @@
                         <h3>Email Me</h3>
                         <i class="card-icon fas fa-envelope-open-text fa-10x"></i>
                     </div>
-                    <div class="email-me-link-cont">
+                    <div class="email-me-link-cont links-cont">
                         <div class="contact-exit-btn-cont exit-cont">
                             <i class="fas fa-times-circle email-me-exit-btn exit-btn"></i>
                         </div>
                         <p>Open In Default Mail Client</p>
-                        <button>Open</button>
+                        <button class="email-btn"><a href="mailto:edolly2@protonmail.com">Open</a></button>
                         <p>-OR-</p>
                         <p>Copy E-mail to Clipboard</p>
-                        <input type="text" value="edolly2@protonmail.com" id="myEmailInput">
-                        <button class="copy-btn">Copy E-mail</button>
+                        <input type="text" value="edolly2@protonmail.com" id="myEmailInput"><br />
+                        <button class="copy-email-btn copy-btn" onclick="copyEmail();">Copy E-mail</button>
                     </div>
 
                     <!-- WRITE ME -->
@@ -278,7 +288,7 @@
                         <h3>Drop Me a Line</h3>
                         <i class="card-icon fas fa-paper-plane fa-10x"></i>
                     </div>
-                    <div class="write-me-link-cont">
+                    <div class="write-me-link-cont links-cont">
                         <div class="contact-exit-btn-cont exit-cont">
                             <i class="fas fa-times-circle write-me-exit-btn exit-btn"></i>
                         </div>
@@ -289,7 +299,8 @@
                                 <label for="email">E-mail</label><br />
                                 <input type="text" name="email" id="email" class="is-focus"><br />
                                 <label for="comments">Comments</label><br />
-                                <textarea name="comments" id="comments" class="is-focus" cols="30" rows="10"></textarea><br />
+                                <textarea name="comments" id="comments" class="is-focus" cols="30"
+                                    rows="10"></textarea><br />
                                 <input type="submit" value="Send" id="submit">
                             </form>
                         </div>
