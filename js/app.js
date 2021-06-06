@@ -23,6 +23,7 @@ const emailMeExit = $('.email-me-exit-btn');
 const emailMeLink = $('.email-me-link-cont');
 const writeMeCont = $('.write-me-cont');
 const writeMeLinkCont = $('.write-me-link-cont');
+const contactSocial = $('.contact-all-social-cont');
 const modal = $('.modal');
 const isFocus = $('.is-focus');
 const modalExitBtn = $('.exit-btn-modal');
@@ -53,9 +54,9 @@ function showHide(whatClick, whatShow, whatHide) {
 $(document).ready(() => {
     show(certsBtn, certs);
     show(bioBtn, bio);
-    show(writeMeCont, writeMeLinkCont);
+    showHide(writeMeCont, writeMeLinkCont, contactSocial);
+    showHide($('.write-me-exit-btn'), contactSocial, writeMeLinkCont);
 
-    hide($('.write-me-exit-btn'), writeMeLinkCont);
     hide(popupExit, popup);
     hide(emailMeExit, emailMeLink);
 
@@ -166,10 +167,53 @@ $(document).ready(() => {
     });
 
     $(isFocus).on('focus', () => {
-        $('.please-rotate').hide();
+        if ($(isFocus).is(':focus')) {
+            console.log(isFocus);
+            // $('.please-rotate').hide();
+        }
+        // else {
+        //     return;
+        // }
         // $('.contact-social-cont').css('display', 'none');
     });
-    
+    // $(window).width(() => {
+    //     let height = $(window).height();
+    //     let width = $(window).width();
+    //     if (width < height || $(isFocus).is(':focus')) {
+    //         $('.please-rotate').css('display', 'none')
+    //     } else {
+    //         $('.please-rotate').css('display', 'flex');
+    //     }
+    // })
+    // $(window).width(() => {
+
+    //     if (width > height) {
+    //         $('.please-rotate').css('display', 'flex');
+    //     }
+    // let height = $(window).height();
+    // let width = $(window).width();
+    // $(window).on('load', () => {
+    //     if($(height > width)) {
+    //         $('.please-rotate').css('display', 'none')
+    //     }
+    //     else if(width > height) {
+    //         $('.please-rotate').css('display', 'flex');
+    //     }
+    // })
+    let height = $(window).height();
+    let width = $(window).width();
+    // $(window).on('load', () => {
+    //     if(height < width) {
+    //         $('.please-rotate').css('display', 'flex');
+    //     }
+    // });
+    $(window).resize(() => {
+        if($(isFocus).is(':focus') || width < height) {
+            $('.please-rotate').css('display', 'none');
+        } else if(width > height) {
+            $('.please-rotate').css('display', 'flex');
+        }
+    });
 
 });
 
