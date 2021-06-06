@@ -192,12 +192,13 @@ $(document).ready(() => {
         if(!$('.please-rotate').hasClass('hide')) {
             $('.please-rotate').addClass('hide');
         }
+        $('.please-rotate').addClass('hide');
     });
 
     $(isFocus).focusout(() => {
         bullshit();
     });
-    
+
     bullshit();
 
     // });
