@@ -33,9 +33,12 @@ const isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
 // FUNCTIONS
 
 function bullshit() {
-    if ($(window).width() > $(window).height()) {
+    if($(window).width() > 768 && $(window).width() > $(window).height()) {
+        $('.please-rotate').addClass('hide');
+    } else if ($(window).width() > $(window).height()) {
         $('.please-rotate').removeClass('hide');
-    } else if ($(window).width() < $(window).height()) {
+    }
+    if($(window).width() < $(window).height()) {
         $('.please-rotate').addClass('hide');
     }
 }
@@ -176,16 +179,37 @@ $(document).ready(() => {
         $('.navCont').css('display', 'none');
     });
 
-    // $(window).on('load', () => {
-    //     if ($(window).width() > $(window).height()) {
-    //         $('.please-rotate').show();
-    //     }
-    //     else {
-    //         $('.please-rotate').hide();
-    //     }
-    // })
-    // $('.please-rotate').css('display', 'none');
 
+    $(writeMeCont).on('click', () => {
+        $(contactExitBtn).hide(500);
+    })
+
+    $(window).resize(() => {
+        bullshit();
+        // if ($(window).width() > $(window).height()) {
+        //     $('.please-rotate').removeClass('hide');
+        // } else if ($(window).width() < $(window).height()) {
+        //     $('.please-rotate').addClass('hide');
+        // }
+    });
+    bullshit();
+
+    $(window).resize(() => {
+        if ($(writeMeLinkCont).is(':visible')) {
+            $('.please-rotate').addClass('hide');
+        }
+    });
+
+    $('.write-me-exit-btn').on('click', () => {
+        setTimeout(bullshit(), 1000)
+        $(contactExitBtn).show(500);
+        console.log("time");
+    })
+    $('#submit').on('click', () => {
+        $(writeMeLinkCont).hide(500);
+        bullshit();
+        $(contactExitBtn).show(500);
+    })
 
     $(isFocus).focusin(() => {
         $('.please-rotate').addClass('hide');
@@ -195,7 +219,7 @@ $(document).ready(() => {
         bullshit();
     });
 
-    bullshit();
+    // bullshit();
 
     // });
     // $(window).width(() => {
@@ -242,14 +266,6 @@ $(document).ready(() => {
 
 
 
-    $(window).resize(() => {
-        if ($(window).width() > $(window).height()) {
-            $('.please-rotate').removeClass('hide');
-        } else if ($(window).width() < $(window).height()) {
-            $('.please-rotate').addClass('hide');
-        }
-    });
-    bullshit();
 
 });
 
