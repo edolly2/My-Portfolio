@@ -14,9 +14,12 @@ const certs = $('.certs-cont');
 const mobileCertsExitBtn = $('.mobile-certs-exit-btn-cont');
 const certsMobile = $('.certs-mobile-cont');
 const certsBtn = $('.certs-btn');
+const bio = $('.bio-cont');
 const bioExitBtn = $('.bio-exit-btn-cont');
 const bioBtn = $('.bio-btn');
-const bio = $('.bio-cont');
+const knowledge = $('.knowledge-cont');
+const knowledgeExitBtn = $('.knowledge-exit-btn-cont');
+const knowledgeBtn = $('.knowledge-btn');
 const popupExit = $('.popup-exit-btn');
 const popup = $('.popup-cont');
 const emailMeExit = $('.email-me-exit-btn');
@@ -74,20 +77,26 @@ $(document).ready(() => {
     show(bioBtn, bio);
     showHide(writeMeCont, writeMeLinkCont, contactSocial);
     showHide($('.write-me-exit-btn'), contactSocial, writeMeLinkCont);
-
+    
     hide(popupExit, popup);
     hide(emailMeExit, emailMeLink);
-
+    
     showHide(modalExitBtn, navMenu, modal);
     showHide(pcCertsExitBtn, aboutModal, certs);
     showHide(mobileCertsExitBtn, aboutModal, certsMobile);
-
-    // $('.skill-modals').hide();
+    
     showHide(bioExitBtn, aboutModal, bio);
-
+    showHide(knowledgeExitBtn, aboutModal, knowledge);
+    
+    
     $(certsBtn).on('click', () => {
         $(certs).css('display', 'flex');
     });
+    
+
+    $(knowledgeBtn).on('click', () => {
+        $(knowledge).css('display', 'flex');
+    })
 
     $(navMenuEnter).on('click', () => {
         $(navMenu).show(500);
@@ -284,15 +293,7 @@ $(document).ready(() => {
     showHide(reactBtn, reactModal, mobileCertsExitBtn);
     showHide(uxBtn, uxModal, mobileCertsExitBtn);
     showHide(phpBtn, phpModal, mobileCertsExitBtn);
-
-    // $(certsBtn).on('click', () => {
-    //     if(width > 768)
-    // });
-    
-
-
-
-})
+});
 
 // VANILLA JAVASCRIPT
 
