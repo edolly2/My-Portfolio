@@ -235,25 +235,65 @@ $(document).ready(() => {
         $(callMeLinkCont).hide(500);
         $(contactExitBtn).show(500);
     });
+
+    // MOBILE CERTS
+    const careerPathsBtn = $('.career-paths-btn');
+    const htmlBtn = $('.html-btn');
+    const phpBtn = $('.php-btn');
+    const cssBtn = $('.css-btn');
+    const jsBtn = $('.js-btn');
+    const jqueryBtn = $('.jquery-btn');
+    const gitBtn = $('.git-btn');
+    const nodejsBtn = $('.nodejs-btn');
+    const bootstrapBtn = $('.bootstrap-btn');
+    const uxBtn = $('.ux-btn');
+    const foundationsBtn = $('.foundations-btn');
+    const foundationsBtn2 = $('.foundations2-btn');
+    const pythonBtn = $('.python-btn');
+    const reactBtn = $('.react-btn');
+    const mobileCertsModalExit = $('.mobile-certs-exit');
+    const mobileCertsList = $('.certs-mobile-modal-cont');
+    const careerPathsModal = $('.career-paths-modal');
+    const htmlModal = $('.html-modal');
+    const phpModal = $('.php-modal');
+    const cssModal = $('.css-modal');
+    const jsModal = $('.js-modal');
+    const jqueryModal = $('.jquery-modal');
+    const gitModal = $('.git-modal');
+    const nodejsModal = $('.nodejs-modal');
+    const bootstrapModal = $('.bootstrap-modal');
+    const foundationsModal = $('.foundations-modal');
+    const foundationsModal2 = $('.foundations2-modal');
+    const pythonModal = $('.python-modal');
+    const reactModal = $('.react-modal');
+    const uxModal = $('.ux-modal');
+
+    showHide(mobileCertsModalExit, mobileCertsExitBtn, mobileCertsList);
+
+    showHide(careerPathsBtn, careerPathsModal, mobileCertsExitBtn);
+    showHide(htmlBtn, htmlModal, mobileCertsExitBtn);
+    showHide(cssBtn, cssModal, mobileCertsExitBtn);
+    showHide(jsBtn, jsModal, mobileCertsExitBtn);
+    showHide(jqueryBtn, jqueryModal, mobileCertsExitBtn);
+    showHide(gitBtn, gitModal, mobileCertsExitBtn);
+    showHide(nodejsBtn, nodejsModal, mobileCertsExitBtn);
+    showHide(bootstrapBtn, bootstrapModal, mobileCertsExitBtn);
+    showHide(foundationsBtn, foundationsModal, mobileCertsExitBtn);
+    showHide(foundationsBtn2, foundationsModal2, mobileCertsExitBtn);
+    showHide(pythonBtn, pythonModal, mobileCertsExitBtn);
+    showHide(reactBtn, reactModal, mobileCertsExitBtn);
+    showHide(uxBtn, uxModal, mobileCertsExitBtn);
+    showHide(phpBtn, phpModal, mobileCertsExitBtn);
+
+    
+
+
+
 });
 
 // VANILLA JAVASCRIPT
 
-// let copyBtn = document.getElementsByClassName('copy-btn').addEventListener('click', () => {
-//     let copyText = document.getElementById("myPhoneInput");
-//     copyText.select();
-//     copyText.setSelectionRange(0, 99999);
-//     document.execCommand("copy");
-//     alert("Copied the text: " + copyText.value);
-// });
 
-// function copyToClipboard(element) {
-//     var $temp = $("<input>");
-//     $("body").append($temp);
-//     $temp.val($(element).text()).select();
-//     document.execCommand("copy");
-//     $temp.remove();
-//   }
 
 
 function copyPhone() {

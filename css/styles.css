@@ -360,7 +360,8 @@ footer {
 }
 
 .certs-cont,
-.bio-cont {
+.bio-cont,
+.certs-mobile-cont {
     display: none;
     position: absolute;
     top: 0;
@@ -545,8 +546,8 @@ hr {
     padding: 1rem;
     background-color: #00013d;
 }
-.write-me-form-cont {
-}
+
+.write-me-form-cont {}
 
 .write-me-exit-btn {
     padding: 0;
@@ -559,7 +560,8 @@ textarea {
 }
 
 input:focus,
-textarea:focus, #myPhoneInput:focus {
+textarea:focus,
+#myPhoneInput:focus {
     box-shadow: 0 0 0 1px yellow;
 }
 
@@ -830,8 +832,8 @@ textarea:focus, #myPhoneInput:focus {
     width: 100%;
     height: 100%;
     display: flex;
-        justify-content: center;
-        align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .hide {
@@ -922,13 +924,26 @@ textarea:focus, #myPhoneInput:focus {
     top: 0;
     width: 100%;
     height: 100%;
-    display: none;
+    /* display: none; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     z-index: 10;
-    background-color: #fff;
+    background-color: rgba(0, 1, 61, 0.8);
+    text-align: center;
+}
+
+.certs-mobile-cont h3 {
+    padding: 2rem 1rem 0.5rem 1rem;
+    font-size: 2.2rem;
+}
+
+.certs-mobile-cont button {
+    padding: 1rem 2rem;
 }
 
 .certs-mobile-list {
-    display: none;
+    /* display: none; */
 }
 
 .certs-cont {
@@ -951,23 +966,31 @@ textarea:focus, #myPhoneInput:focus {
     top: 1rem;
 }
 
-.call-btn, .copy-btn, .email-btn {
+.call-btn,
+.copy-btn,
+.email-btn,
+.mobile-view-btn {
     /* border: 2px solid transparent; */
     border-radius: 0.6rem;
     background-color: #1ceaea;
     box-shadow: inset 0 0 10px black;
 }
+
 .copy-btn {
     font-size: clamp(1.8rem, 1.8vw, 3rem);
     color: -webkit-link;
 }
 
-.call-btn:hover, .copy-btn:hover, .email-btn:hover {
+.call-btn:hover,
+.copy-btn:hover,
+.email-btn:hover,
+.mobile-view-btn:hover {
     background-color: yellow;
     border: 2px solid yellow;
 }
 
-#myPhoneInput, #myEmailInput {
+#myPhoneInput,
+#myEmailInput {
     font-size: 1.6rem;
     text-align: center;
     outline: none;
@@ -980,9 +1003,9 @@ textarea:focus, #myPhoneInput:focus {
 .tooltip {
     position: relative;
     display: inline-block;
-  }
-  
-  .tooltip .tooltiptext {
+}
+
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 140px;
     background-color: #555;
@@ -997,9 +1020,9 @@ textarea:focus, #myPhoneInput:focus {
     margin-left: -75px;
     opacity: 0;
     transition: opacity 0.3s;
-  }
-  
-  .tooltip .tooltiptext::after {
+}
+
+.tooltip .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -1008,10 +1031,54 @@ textarea:focus, #myPhoneInput:focus {
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
-  }
-  
-  .tooltip:hover .tooltiptext {
+}
+
+.tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-  }
+}
 
+
+.certs-mobile-modal-cont {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 60vh;
+    background-color: rgba(0, 1, 61, 0.8);
+    border-radius: 1.2rem;
+    display: none;
+}
+
+.mobile-list-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.certs-mobile-exit-btn-cont {
+    /* display: flex;
+    justify-content: flex-end; */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.certs-mobile-list li {
+    padding: 1rem;
+    font-family: 'Lato';
+}
+
+.certs-mobile-list li a{
+    color: white;
+}
+
+.mobile-certs-group3 {
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    width: 100%;
+}
