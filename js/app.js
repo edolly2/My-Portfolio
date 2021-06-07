@@ -31,6 +31,8 @@ const modal = $('.modal');
 const isFocus = $('.is-focus');
 const modalExitBtn = $('.exit-btn-modal');
 const isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
+let height = $(window).height();
+let width = $(window).width();
 
 
 // FUNCTIONS
@@ -174,11 +176,11 @@ $(document).ready(() => {
     $(certsBtn).on('click', () => {
         if ($(window).width() < 768) {
             console.log('ismobile');
-            $(certsMobile).show(500);
+            $(certsMobile).css('display', 'flex');
             $(certs).hide();
         } else {
             console.log('isnotmboile');
-            $(certsMobile).hide();
+            $(certsMobile).css('display', 'none');
             $(certs).show(500);
             $(certs).css('display', 'flex');
         }
@@ -224,8 +226,6 @@ $(document).ready(() => {
         bullshit();
     });
 
-    let height = $(window).height();
-    let width = $(window).width();
 
     $(callMeCont).on('click', () => {
         $(callMeLinkCont).show(500);
@@ -285,11 +285,14 @@ $(document).ready(() => {
     showHide(uxBtn, uxModal, mobileCertsExitBtn);
     showHide(phpBtn, phpModal, mobileCertsExitBtn);
 
+    // $(certsBtn).on('click', () => {
+    //     if(width > 768)
+    // });
     
 
 
 
-});
+})
 
 // VANILLA JAVASCRIPT
 
@@ -305,7 +308,7 @@ function copyPhone() {
 function outFunc() {
     var tooltip = document.getElementById("myTooltip");
     tooltip.innerHTML = "Copy to clipboard";
-  }
+}
 
 function copyEmail() {
     document.getElementById("myEmailInput").select();
