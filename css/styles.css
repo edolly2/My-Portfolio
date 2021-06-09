@@ -1099,3 +1099,68 @@ textarea:focus,
 .knowledge-exit-btn-cont {
     width: 100%;
 }
+
+.form-cont {
+    text-align: center;
+    height: 80vh;
+    width: 70vw;
+    background-color: rgba(0, 1, 61, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1.2rem;
+}
+
+.form-page {
+    text-align: center;
+}
+
+.form-input {
+    margin: 1rem;
+}
+
+.red,
+.error {
+    color: #bf3d4a;
+    text-shadow: none;
+}
+
+.error {
+    position: relative;
+}
+
+label {
+    text-shadow: none;
+    font-weight: 900;
+}
+
+label, input {
+    font-size: 1.6rem;
+}
+
+textarea {
+    margin-top: 0;
+}
+
+
+
+#email {
+    margin-bottom: 5rem;
+}
+
+.form-title, #submit {
+    padding: 2rem 2rem 4rem 2rem;
+    color: #bf3d4a;
+    font-size: clamp(2.4rem, 6.8vw, 3.6rem);
+    text-shadow: 2px 2px 2px #1ceaea, -2px 2px 2px #1ceaea, 2px -2px 2px #1ceaea, 1px 2px 2px #1ceaea, 2px 1px 2px #1ceaea, -1px 2px 2px #1ceaea, 2px -1px 2px #1ceaea, 1px -2px 2px #1ceaea, -2px 1px 2px #1ceaea, -1px -2px 2px #1ceaea, -2px -1px 2px #1ceaea, 1px 1px 2px #1ceaea, -1px -1px 2px #1ceaea, -1px 1px 2px #1ceaea, 1px -1px 2px #1ceaea, 0px 2px 2px #1ceaea, 2px 0px 2px #1ceaea, -2px 0px 2px #1ceaea, 0px -2px 2px #1ceaea, 0px 1px 2px #1ceaea, 1px 0px 2px #1ceaea, 0px -1px 2px #1ceaea, -1px 0px 2px #1ceaea, 0px 0px 2px #1ceaea, 5px 5px 10px black;
+}
+
+#submit {
+    font-size: 2.4rem;
+    font-family: 'Dancing Script';
+    font-weight: 900;
+    padding: 0.5rem 3rem;
+    box-shadow: inset 0 0 10px black ;
+    text-shadow: 2px 2px 2px #1ceaea, -2px 2px 2px #1ceaea, 2px -2px 2px #1ceaea, 1px 2px 2px #1ceaea, 2px 1px 2px #1ceaea, -1px 2px 2px #1ceaea, 2px -1px 2px #1ceaea, 1px -2px 2px #1ceaea, -2px 1px 2px #1ceaea, -1px -2px 2px #1ceaea, -2px -1px 2px #1ceaea, 1px 1px 2px #1ceaea, -1px -1px 2px #1ceaea, -1px 1px 2px #1ceaea, 1px -1px 2px #1ceaea, 0px 2px 2px #1ceaea, 2px 0px 2px #1ceaea, -2px 0px 2px #1ceaea, 0px -2px 2px #1ceaea, 0px 1px 2px #1ceaea, 1px 0px 2px #1ceaea, 0px -1px 2px #1ceaea, -1px 0px 2px #1ceaea, 0px 0px 2px #1ceaea, 5px 5px 10px black;
+}

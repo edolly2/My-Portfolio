@@ -75,7 +75,7 @@ $(document).ready(() => {
     bullshit();
     show(certsBtn, certs);
     show(bioBtn, bio);
-    showHide(writeMeCont, writeMeLinkCont, contactSocial);
+    // showHide(writeMeCont, writeMeLinkCont, contactSocial);
     showHide($('.write-me-exit-btn'), contactSocial, writeMeLinkCont);
     
     hide(popupExit, popup);
@@ -141,6 +141,17 @@ $(document).ready(() => {
         $('.soci-title').css('color', 'white');
     });
 
+    $(writeMeCont).on('click', () => {
+        parent.location.href = "/My_Portfolio/contact.php";
+    });
+
+    $('.form-exit-btn-cont').on('click', () => {
+        parent.location.href = "/My_Portfolio/index.html";
+        $(window).on('load', () => {
+            $(contactModal).show(500);
+        })
+    });
+
 
     $('.email-me-cont').on('click', () => {
         var email = 'edolly2@protonmail.com';
@@ -154,7 +165,7 @@ $(document).ready(() => {
         }
 
 
-    });
+    })
 
     $('.call-me-cont').on('click', () => {
         if ($(width) < 640) {
