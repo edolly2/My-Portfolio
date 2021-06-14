@@ -341,7 +341,7 @@ hr {
     background-color: #1ceaea;
 }
 
-.goback-btn-cont,
+/* .goback-btn-cont,
 .goback-btn-cont2 {
     display: flex;
     flex-wrap: nowrap;
@@ -352,7 +352,7 @@ hr {
     align-items: center;
     transform: translate(-50%);
 
-}
+} */
 
 .goback-btn-cont:hover,
 .goback-btn-cont2:hover {
@@ -557,8 +557,8 @@ textarea:focus,
     position: absolute;
     margin: 4rem 0;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    transform: translate(-50%, -40%);
 }
 
 .dot-cont {
@@ -1082,6 +1082,10 @@ textarea {
     font-size: 2.4rem;
     padding: 0.5rem 3rem;
     box-shadow: inset 0 0 10px black;
+}
+
+.demo-p {
+    padding: 3rem;
 }
 
 /* ==========FONT FAMILIES/ TYPOGRAPHY============ */
