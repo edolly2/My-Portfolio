@@ -119,7 +119,7 @@ function test_input($data) {
                             <form class="write-me-form" method="post"> 
                                 <p><span class="red">* Required Field</span></p>
                                 <label for="name">Name <span class="red">*</span></label><br/>
-                                <input type="text" name="name" id="name" class="is-focus form-input" value="<?php echo htmlspecialchars($name); ?>">
+                                <input type="text" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> name="name" id="name" class="is-focus form-input" value="<?php echo htmlspecialchars($name); ?>">
                                 <span class="error"><?php echo htmlspecialchars($nameErr); ?></span><br/>
                                 <label for="email">E-mail <span class="red">*</span></label><br/>
                                 <input type="text" name="email" id="email" class="is-focus form-input" value="<?php echo htmlspecialchars($email); ?>">

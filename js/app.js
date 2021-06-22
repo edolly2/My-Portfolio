@@ -142,11 +142,11 @@ $(document).ready(() => {
     });
 
     $(writeMeCont).on('click', () => {
-        parent.location.href = "/My_Portfolio/contact.php";
+        parent.location.href = "/contact.php";
     });
 
     $('.form-exit-btn-cont').on('click', () => {
-        parent.location.href = "/My_Portfolio/index.html";
+        parent.location.href = "/index.html";
         $(window).on('load', () => {
             $(contactModal).show(500);
         })
