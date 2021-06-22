@@ -119,15 +119,15 @@ function test_input($data) {
                             <form class="write-me-form" method="post"> 
                                 <p><span class="red">* Required Field</span></p>
                                 <label for="name">Name <span class="red">*</span></label><br/>
-                                <input type="text" name="name" id="name" class="is-focus form-input" value="<?php echo $name; ?>">
-                                <span class="error"><?php echo $nameErr; ?></span><br/>
+                                <input type="text" name="name" id="name" class="is-focus form-input" value="<?php echo htmlspecialchars($name); ?>">
+                                <span class="error"><?php echo htmlspecialchars($nameErr); ?></span><br/>
                                 <label for="email">E-mail <span class="red">*</span></label><br/>
-                                <input type="text" name="email" id="email" class="is-focus form-input" value="<?php echo $email; ?>">
+                                <input type="text" name="email" id="email" class="is-focus form-input" value="<?php echo htmlspecialchars($email); ?>">
                                 <span class="error"><?php echo $emailErr; ?></span><br/>
                                 <label for="comment">Comments <span class="red">*</span></label><br/>
                                 <span class="error"><?php echo $commentErr; ?></span><br/>
                                 <textarea name="comment" id="comment" class="is-focus" cols="38"
-                                rows="15"><?php echo $comment; ?></textarea><br />
+                                rows="15"><?php echo htmlspecialchars($comment); ?></textarea><br />
                                 <input type="submit" value="Send" id="submit">
                             </form>
                         </div>
