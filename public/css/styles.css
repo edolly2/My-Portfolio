@@ -255,7 +255,7 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
-    display: none;
+    /* display: none; */
     text-align: center;
 }
 
@@ -297,7 +297,7 @@ footer {
 .certs-cont,
 .bio-cont,
 .certs-mobile-cont {
-    display: none;
+    /* display: none; */
     position: absolute;
     top: 0;
     z-index: 4;
@@ -458,7 +458,7 @@ hr {
 }
 
 .links-cont {
-    display: none;
+    /* display: none; */
     position: absolute;
     left: 50%;
     top: 50%;
@@ -771,7 +771,7 @@ textarea:focus,
 }
 
 .skill-modals {
-    display: none;
+    /* display: none; */
 
 }
 
@@ -784,7 +784,7 @@ textarea:focus,
     }
 
     .soci-title {
-        display: none;
+        /* display: none; */
     }
 
     .contact-icons {
@@ -964,7 +964,7 @@ textarea:focus,
     height: 60vh;
     background-color: rgba(0, 1, 61, 0.8);
     border-radius: 1.2rem;
-    display: none;
+    /* display: none; */
 }
 
 .mobile-list-wrapper {
