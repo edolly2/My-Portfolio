@@ -90,7 +90,7 @@ foreach($_POST as $names => $value) {
             <label for="comment">Comments <span class="red">*</span></label><br />
             <span class="error"><?php echo $commentErr; ?></span><br />
             <textarea name="comment" id="comment" class="is-focus" style="width: 60%"; rows="10"><?php echo htmlspecialchars($comment); ?></textarea><br />
-            <input type="submit" value="Send" id="submit" name="submit">
+            <input type="submit" value="Send" id="message-submit" name="submit">
         </form>
     </div>
 </div>
