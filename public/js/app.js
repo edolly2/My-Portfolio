@@ -113,22 +113,6 @@ $(document).ready(() => {
         $(e.currentTarget).css('text-decoration', 'line-through');
     });
 
-    $(navLink).on('click', (e) => {
-        $('.modal').hide(500);
-        if ($(e.target).is('#about')) {
-            $(aboutModal).show(500);
-            $(navMenu).hide(500);
-        } else if ($(e.target).is('#projects')) {
-            $(projectsModal).show(500);
-            $(navMenu).hide(500);
-        } else if ($(e.target).is('#contact')) {
-            $(contactModal).show(500);
-            $(navMenu).hide(500);
-        } else {
-            $('.modal').hide(500);
-        }
-    });
-
     if ($(popup).css('display') == 'block') {
         $(navMenu).hide();
     }

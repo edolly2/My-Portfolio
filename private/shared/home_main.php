@@ -32,9 +32,9 @@
             </div>
             <nav class="nav-menu">
                 <ul>
-                    <li id="about" class="nav-link"><a href="<?php echo url_for('about/index.php'); ?>">About</a></li>
-                    <li id="projects" class="nav-link"><a href="<?php echo url_for('projects/index.php'); ?>">Projects</a></li>
-                    <li id="contact" class="nav-link"><a href="<?php echo url_for('contact/index.php'); ?>">Contact</a></li>
+                    <a href="<?php echo url_for('about/index.php'); ?>"><li id="about" class="nav-link">About</li></a>
+                    <a href="<?php echo url_for('projects/index.php'); ?>"><li id="projects" class="nav-link">Projects</li></a>
+                    <a href="<?php echo url_for('contact/index.php'); ?>"><li id="contact" class="nav-link">Contact</li></a>
                 </ul>
             </nav>
         </div>
