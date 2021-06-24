@@ -52,23 +52,6 @@
                         <h3>Drop Me a Line</h3>
                         <i class="card-icon fas fa-paper-plane fa-10x"></i>
                     </div>
-                    <div class="write-me-link-cont links-cont">
-                        <div class="contact-exit-btn-cont exit-cont">
-                            <i class="fas fa-times-circle write-me-exit-btn exit-btn"></i>
-                        </div>
-                        <div class="write-me-form-cont">
-                            <form action="#" class="write-me-form">
-                                <label for="name">Name</label><br />
-                                <input type="text" name="name" id="name" class="is-focus"><br />
-                                <label for="email">E-mail</label><br />
-                                <input type="text" name="email" id="email" class="is-focus"><br />
-                                <label for="comments">Comments</label><br />
-                                <textarea name="comments" id="comments" class="is-focus" cols="30"
-                                    rows="10"></textarea><br />
-                                <input type="submit" value="Send" id="submit">
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </div>
 

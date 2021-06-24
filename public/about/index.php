@@ -1,4 +1,5 @@
 <?php require_once "../../private/initialize.php"; ?>
+<?php $page_title = "Eric Dollinger's Bio"; ?>
 <?php require SHARED_PATH . "/head.php"; ?>
 <?php require SHARED_PATH . "/home_main.php"; ?>
 <?php require SHARED_PATH . "/about.php"; ?>

@@ -1,3 +1,10 @@
+<?php 
+    if(!isset($page_title)) {
+        $page_title = "Eric Dollinger's Portfolio";
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +22,7 @@
     <meta name="subject" content="Eric Dollinger">
     <link rel="icon" sizes="192x192" href="<?php echo url_for('/assets/images/logo.png'); ?>">
     <link rel="canonical" href="index.php">
-    <title>Eric Dollinger's Portfolio</title>
+    <title><?php echo h($page_title); ?></title>
     <link rel="stylesheet" href="<?php echo url_for('/css/RESET.css'); ?>">
     <link rel="stylesheet" href="<?php echo url_for('/css/normalize.css'); ?>">
     <link rel="stylesheet" href="<?php echo url_for('/assets/typography/typography.css'); ?>">

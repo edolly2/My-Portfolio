@@ -109,8 +109,22 @@ $(document).ready(() => {
     });
 
     $(navLink).on('click', (e) => {
-        $(e.currentTarget).add('.selected');
-        $(e.currentTarget).css('text-decoration', 'line-through');
+        if($(e.target).is('#about')) {
+            $(e.currentTarget).add('.selected');
+            $(e.currentTarget).css('text-decoration', 'line-through');
+        }
+        else if($(e.target).is('#contact')) {
+            $(e.currentTarget).add('.selected');
+            $(e.currentTarget).css('text-decoration', 'line-through');
+        }
+        else if($(e.target).is('#projects')) {
+            $(e.currentTarget).add('.selected');
+            $(e.currentTarget).css('text-decoration', 'line-through');
+        }
+        else {
+            $(navLink).removeClass('selected');
+            $(navlink).css('text-decoration', 'none');
+        }
     });
 
     if ($(popup).css('display') == 'block') {
@@ -126,14 +140,18 @@ $(document).ready(() => {
     });
 
     $(writeMeCont).on('click', () => {
-        parent.location.href = "/contact.php";
+        // parent.location.href = "/contact.php";
+        $('.form-page').show(300);
+        $(contactModal).hide(300);
     });
 
     $('.form-exit-btn-cont').on('click', () => {
-        parent.location.href = "/index.html";
-        $(window).on('load', () => {
-            $(contactModal).show(500);
-        })
+        // parent.location.href = "/index.html";
+        // $(window).on('load', () => {
+        //     $(contactModal).show(500);
+        // })
+        $('.form-page').hide(300);
+        $(contactModal).show(300);
     });
 
 
@@ -216,7 +234,7 @@ $(document).ready(() => {
         $(contactExitBtn).show(500);
         console.log("time");
     })
-    $('#submit').on('click', () => {
+    $('#message-submit').on('click', () => {
         $(writeMeLinkCont).hide(500);
         bullshit();
         $(contactExitBtn).show(500);
@@ -354,3 +372,27 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+// $(document).ready(() => {
+//     const messageForm = ('#message-form');
+//     $(messageForm).submit((event) => {
+//         alert( "Handler for .submit() called." );
+//         event.preventDefault();
+//       });
+// });
+
+
+
+$(document).ready(() => {
+    $('#message-form').submit(function(event) {
+    
+        if($('#email').val().length == 0) {
+            alert("bugger");
+            event.preventDefault(event);
+            return false;
+        }
+       else { 
+          return true;
+       }
+    });
+});
